@@ -75,18 +75,33 @@ try {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div style="margin-left:100px; margin-right: 100px;">
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/ccsd-main-logo-white.png" alt="CCSD Logo" class="logo">
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-utility">
+                    <li><a href="#" class="utility-link">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="main-content" style="margin-left:100px; margin-right: 100px;">
 <?php if (isset($error)): ?>
         <div style="color: red; text-align: center; margin: 20px;">
             <?php echo $error; ?>
         </div>
     <?php else: ?>
 
-    
+    <div style="padding-top:20px;">
     <h1>CCSD Job Search Portal</h1>
-    
+    </div>
     <div class='summary-stats'>
-        <h2>Job Summary</h2>
+        <h2>Summary</h2>
         
         <?php
         // Show search/filter status
