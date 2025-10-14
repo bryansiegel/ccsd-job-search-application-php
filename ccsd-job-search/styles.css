@@ -34,6 +34,13 @@ h1 {
     align-items: end;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
 .search-input-group {
     display: flex;
     gap: 10px;
@@ -131,6 +138,11 @@ h1 {
         flex-direction: column;
     }
     
+    .button-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
     .clear-filters {
         align-self: stretch;
         text-align: center;
@@ -145,6 +157,96 @@ h1 {
     
     .search-input-group {
         grid-column: 1 / -1;
+    }
+    
+    .button-group {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Tab Styles */
+.tabs-container {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.tabs-nav {
+    display: flex;
+    border-bottom: 3px solid #ddd;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+    color: #2c3e50;
+}
+
+.tab-btn.active {
+    background: #fff;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    margin-bottom: -3px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness for tabs */
+@media (max-width: 768px) {
+    .tabs-nav {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        border-radius: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .tab-btn:last-child {
+        border-bottom: none;
+    }
+    
+    .tab-btn.active {
+        border-bottom: none;
+        border-left: 4px solid #3498db;
+        margin-bottom: 0;
+        margin-left: -4px;
     }
 }
 
@@ -176,11 +278,11 @@ h1 {
 }
 
 .jobs-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -263,5 +365,17 @@ h1 {
     
     .summary-stats {
         margin: 0 10px 20px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .jobs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1400px) {
+    .jobs-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

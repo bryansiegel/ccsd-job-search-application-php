@@ -24,11 +24,20 @@ try {
         $allJobs = $jobModel->getAllJobs();
     }
     
-    // Apply job type filter if specified
+    // Initialize empty arrays for job types that don't exist
+    if (!isset($allJobs['administration'])) $allJobs['administration'] = [];
+    if (!isset($allJobs['licensed'])) $allJobs['licensed'] = [];
+    if (!isset($allJobs['support'])) $allJobs['support'] = [];
+    
+    // Apply job type filter if specified (keep all arrays but filter content)
     if ($filterType !== 'all') {
-        $filteredJobs = [];
-        $filteredJobs[$filterType] = isset($allJobs[$filterType]) ? $allJobs[$filterType] : [];
-        $allJobs = $filteredJobs;
+        $tempJobs = $allJobs;
+        $allJobs = [
+            'administration' => [],
+            'licensed' => [],
+            'support' => []
+        ];
+        $allJobs[$filterType] = isset($tempJobs[$filterType]) ? $tempJobs[$filterType] : [];
     }
     
     // Apply additional filters (grade, code, division)
@@ -52,180 +61,8 @@ try {
     // Get total counts (always show full counts)
     $jobCounts = $jobModel->getAllJobsCounts();
     
-    echo "<h1>CCSD Job Search Portal</h1>";
-    
-    echo "<div class='summary-stats'>";
-    echo "<h2>Job Summary</h2>";
-    
-    // Show search/filter status
-    if (!empty($searchTerm)) {
-        echo "<p class='search-status'><strong>Search results for:</strong> \"" . htmlspecialchars($searchTerm) . "\"</p>";
-    }
-    if ($filterType !== 'all') {
-        echo "<p class='filter-status'><strong>Filtered by:</strong> " . ucfirst($filterType) . " Jobs</p>";
-    }
-    
-    // Calculate filtered counts
-    $currentCounts = [
-        'administration' => isset($allJobs['administration']) ? count($allJobs['administration']) : 0,
-        'licensed' => isset($allJobs['licensed']) ? count($allJobs['licensed']) : 0,
-        'support' => isset($allJobs['support']) ? count($allJobs['support']) : 0
-    ];
-    $currentTotal = $currentCounts['administration'] + $currentCounts['licensed'] + $currentCounts['support'];
-    
-    if (!empty($searchTerm) || $filterType !== 'all') {
-        echo "<p><strong>Results Found:</strong></p>";
-        if ($currentCounts['administration'] > 0) {
-            echo "<p>Administration Jobs: " . $currentCounts['administration'] . "</p>";
-        }
-        if ($currentCounts['licensed'] > 0) {
-            echo "<p>Licensed Jobs: " . $currentCounts['licensed'] . "</p>";
-        }
-        if ($currentCounts['support'] > 0) {
-            echo "<p>Support Jobs: " . $currentCounts['support'] . "</p>";
-        }
-        echo "<p><strong>Total Results: " . $currentTotal . "</strong></p>";
-        echo "<hr>";
-        echo "<p><em>Total Available Jobs:</em></p>";
-    }
-    
-    echo "<p><strong>Administration Jobs:</strong> " . $jobCounts['administration'] . "</p>";
-    echo "<p><strong>Licensed Jobs:</strong> " . $jobCounts['licensed'] . "</p>";
-    echo "<p><strong>Support Jobs:</strong> " . $jobCounts['support'] . "</p>";
-    echo "<p><strong>Total Jobs:</strong> " . $jobCounts['total'] . "</p>";
-    echo "</div>";
-    
-    // Search and Filter Form
-    echo "<div class='search-filter-container'>";
-    echo "<form method='GET' action='' class='search-form'>";
-    echo "<div class='search-input-group'>";
-    echo "<input type='text' name='search' placeholder='Search jobs by title, grade, division, code, etc...' value='" . htmlspecialchars($searchTerm) . "' class='search-input'>";
-    echo "<button type='submit' class='search-btn'>Search</button>";
-    echo "</div>";
-    echo "<div class='filter-group'>";
-    echo "<label for='filter'>Filter by type:</label>";
-    echo "<select name='filter' id='filter' class='filter-select'>";
-    echo "<option value='all'" . ($filterType === 'all' ? ' selected' : '') . ">All Jobs</option>";
-    echo "<option value='administration'" . ($filterType === 'administration' ? ' selected' : '') . ">Administration</option>";
-    echo "<option value='licensed'" . ($filterType === 'licensed' ? ' selected' : '') . ">Licensed</option>";
-    echo "<option value='support'" . ($filterType === 'support' ? ' selected' : '') . ">Support</option>";
-    echo "</select>";
-    echo "</div>";
-    
-    echo "<div class='filter-group'>";
-    echo "<label for='grade'>Filter by grade:</label>";
-    echo "<select name='grade' id='grade' class='filter-select'>";
-    echo "<option value=''>All Grades</option>";
-    foreach ($filterOptions['grades'] as $grade) {
-        $selected = ($filterGrade === $grade) ? ' selected' : '';
-        echo "<option value='" . htmlspecialchars($grade) . "'" . $selected . ">" . htmlspecialchars($grade) . "</option>";
-    }
-    echo "</select>";
-    echo "</div>";
-    
-    echo "<div class='filter-group'>";
-    echo "<label for='code'>Filter by code:</label>";
-    echo "<select name='code' id='code' class='filter-select'>";
-    echo "<option value=''>All Codes</option>";
-    foreach ($filterOptions['codes'] as $code) {
-        $selected = ($filterCode === $code) ? ' selected' : '';
-        echo "<option value='" . htmlspecialchars($code) . "'" . $selected . ">" . htmlspecialchars($code) . "</option>";
-    }
-    echo "</select>";
-    echo "</div>";
-    
-    echo "<div class='filter-group'>";
-    echo "<label for='division'>Filter by division:</label>";
-    echo "<select name='division' id='division' class='filter-select'>";
-    echo "<option value=''>All Divisions</option>";
-    foreach ($filterOptions['divisions'] as $division) {
-        $selected = ($filterDivision === $division) ? ' selected' : '';
-        echo "<option value='" . htmlspecialchars($division) . "'" . $selected . ">" . htmlspecialchars($division) . "</option>";
-    }
-    echo "</select>";
-    echo "</div>";
-    
-    if (!empty($searchTerm) || $filterType !== 'all' || !empty($filterGrade) || !empty($filterCode) || !empty($filterDivision)) {
-        echo "<a href='index.php' class='clear-filters'>Clear Filters</a>";
-    }
-    echo "</form>";
-    echo "</div>";
-    
-    // Display Administration Jobs
-    echo "<div class='job-section'>";
-    echo "<h2>Administration Jobs</h2>";
-    echo "<div class='jobs-container'>";
-    foreach ($allJobs['administration'] as $job) {
-        echo "<div class='job-item admin-job'>";
-        echo "<h3>" . htmlspecialchars($job['title']) . "</h3>";
-        echo "<p><strong>Grade:</strong> " . htmlspecialchars($job['grade']) . "</p>";
-        echo "<p><strong>Code:</strong> " . htmlspecialchars($job['ccode']) . "</p>";
-        echo "<p><strong>Division:</strong> " . htmlspecialchars($job['division']) . "</p>";
-        echo "<p><strong>Description:</strong> " . htmlspecialchars($job['description']) . "</p>";
-        if (!empty($job['filename'])) {
-            echo "<p><strong>Filename:</strong> " . htmlspecialchars($job['filename']) . "</p>";
-        }
-        echo "<span class='job-type'>Administration</span>";
-        echo "</div>";
-    }
-    echo "</div>";
-    echo "</div>";
-    
-    // Display Licensed Jobs
-    echo "<div class='job-section'>";
-    echo "<h2>Licensed Jobs</h2>";
-    echo "<div class='jobs-container'>";
-    foreach ($allJobs['licensed'] as $job) {
-        echo "<div class='job-item licensed-job'>";
-        echo "<h3>" . htmlspecialchars($job['title']) . "</h3>";
-        if (!empty($job['job_id'])) {
-            echo "<p><strong>Job ID:</strong> " . htmlspecialchars($job['job_id']) . "</p>";
-        }
-        echo "<p><strong>Category:</strong> " . htmlspecialchars($job['category']) . "</p>";
-        echo "<p><strong>Division:</strong> " . htmlspecialchars($job['division']) . "</p>";
-        echo "<p><strong>Certification:</strong> " . htmlspecialchars($job['certification_type']) . "</p>";
-        if (!empty($job['filename'])) {
-            echo "<p><strong>Filename:</strong> " . htmlspecialchars($job['filename']) . "</p>";
-        }
-        if (!empty($job['salary_code'])) {
-            echo "<p><strong>Salary Code:</strong> " . htmlspecialchars($job['salary_code']) . "</p>";
-        }
-        echo "<span class='job-type'>Licensed</span>";
-        echo "</div>";
-    }
-    echo "</div>";
-    echo "</div>";
-    
-    // Display Support Jobs
-    echo "<div class='job-section'>";
-    echo "<h2>Support Jobs</h2>";
-    echo "<div class='jobs-container'>";
-    foreach ($allJobs['support'] as $job) {
-        echo "<div class='job-item support-job'>";
-        echo "<h3>" . htmlspecialchars($job['title']) . "</h3>";
-        if (!empty($job['grade'])) {
-            echo "<p><strong>Grade:</strong> " . htmlspecialchars($job['grade']) . "</p>";
-        }
-        if (!empty($job['job_code'])) {
-            echo "<p><strong>Job Code:</strong> " . htmlspecialchars($job['job_code']) . "</p>";
-        }
-        if (!empty($job['department_code'])) {
-            echo "<p><strong>Department:</strong> " . htmlspecialchars($job['department_code']) . "</p>";
-        }
-        if (!empty($job['union_code'])) {
-            echo "<p><strong>Union Code:</strong> " . htmlspecialchars($job['union_code']) . "</p>";
-        }
-        if (!empty($job['filename'])) {
-            echo "<p><strong>Filename:</strong> " . htmlspecialchars($job['filename']) . "</p>";
-        }
-        echo "<span class='job-type'>Support</span>";
-        echo "</div>";
-    }
-    echo "</div>";
-    echo "</div>";
-    
 } catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
+    $error = "Error: " . $e->getMessage();
 }
 ?>
 
@@ -238,6 +75,214 @@ try {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Content is already echoed above -->
+    <?php if (isset($error)): ?>
+        <div style="color: red; text-align: center; margin: 20px;">
+            <?php echo $error; ?>
+        </div>
+    <?php else: ?>
+    
+    <h1>CCSD Job Search Portal</h1>
+    
+    <div class='summary-stats'>
+        <h2>Job Summary</h2>
+        
+        <?php
+        // Show search/filter status
+        if (!empty($searchTerm)): ?>
+            <p class='search-status'><strong>Search results for:</strong> "<?php echo htmlspecialchars($searchTerm); ?>"</p>
+        <?php endif; ?>
+        
+        <?php if ($filterType !== 'all'): ?>
+            <p class='filter-status'><strong>Filtered by:</strong> <?php echo ucfirst($filterType); ?> Jobs</p>
+        <?php endif; ?>
+        
+        <?php
+        // Calculate filtered counts
+        $currentCounts = [
+            'administration' => isset($allJobs['administration']) ? count($allJobs['administration']) : 0,
+            'licensed' => isset($allJobs['licensed']) ? count($allJobs['licensed']) : 0,
+            'support' => isset($allJobs['support']) ? count($allJobs['support']) : 0
+        ];
+        $currentTotal = $currentCounts['administration'] + $currentCounts['licensed'] + $currentCounts['support'];
+        
+        if (!empty($searchTerm) || $filterType !== 'all' || !empty($filterGrade) || !empty($filterCode) || !empty($filterDivision)): ?>
+            <p><strong>Results Found:</strong></p>
+            <?php if ($currentCounts['administration'] > 0): ?>
+                <p>Administration Jobs: <?php echo $currentCounts['administration']; ?></p>
+            <?php endif; ?>
+            <?php if ($currentCounts['licensed'] > 0): ?>
+                <p>Licensed Jobs: <?php echo $currentCounts['licensed']; ?></p>
+            <?php endif; ?>
+            <?php if ($currentCounts['support'] > 0): ?>
+                <p>Support Jobs: <?php echo $currentCounts['support']; ?></p>
+            <?php endif; ?>
+            <p><strong>Total Results: <?php echo $currentTotal; ?></strong></p>
+            <hr>
+            <p><em>Total Available Jobs:</em></p>
+        <?php endif; ?>
+        
+        <p><strong>Administration Jobs:</strong> <?php echo $jobCounts['administration']; ?></p>
+        <p><strong>Licensed Jobs:</strong> <?php echo $jobCounts['licensed']; ?></p>
+        <p><strong>Support Jobs:</strong> <?php echo $jobCounts['support']; ?></p>
+        <p><strong>Total Jobs:</strong> <?php echo $jobCounts['total']; ?></p>
+    </div>
+    
+    <!-- Search and Filter Form -->
+    <div class='search-filter-container'>
+        <form method='GET' action='' class='search-form'>
+            <div class='search-input-group'>
+                <input type='text' name='search' placeholder='Search jobs by title, grade, division, code, etc...' value='<?php echo htmlspecialchars($searchTerm); ?>' class='search-input'>
+            </div>
+            
+            <div class='filter-group'>
+                <label for='filter'>Filter by type:</label>
+                <select name='filter' id='filter' class='filter-select'>
+                    <option value='all'<?php echo ($filterType === 'all' ? ' selected' : ''); ?>>All Jobs</option>
+                    <option value='administration'<?php echo ($filterType === 'administration' ? ' selected' : ''); ?>>Administration</option>
+                    <option value='licensed'<?php echo ($filterType === 'licensed' ? ' selected' : ''); ?>>Licensed</option>
+                    <option value='support'<?php echo ($filterType === 'support' ? ' selected' : ''); ?>>Support</option>
+                </select>
+            </div>
+            
+            <div class='filter-group'>
+                <label for='grade'>Filter by grade:</label>
+                <select name='grade' id='grade' class='filter-select'>
+                    <option value=''>All Grades</option>
+                    <?php foreach ($filterOptions['grades'] as $grade): ?>
+                        <option value='<?php echo htmlspecialchars($grade); ?>'<?php echo ($filterGrade === $grade) ? ' selected' : ''; ?>><?php echo htmlspecialchars($grade); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            
+            <div class='filter-group'>
+                <label for='code'>Filter by code:</label>
+                <select name='code' id='code' class='filter-select'>
+                    <option value=''>All Codes</option>
+                    <?php foreach ($filterOptions['codes'] as $code): ?>
+                        <option value='<?php echo htmlspecialchars($code); ?>'<?php echo ($filterCode === $code) ? ' selected' : ''; ?>><?php echo htmlspecialchars($code); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            
+            <div class='filter-group'>
+                <label for='division'>Filter by division:</label>
+                <select name='division' id='division' class='filter-select'>
+                    <option value=''>All Divisions</option>
+                    <?php foreach ($filterOptions['divisions'] as $division): ?>
+                        <option value='<?php echo htmlspecialchars($division); ?>'<?php echo ($filterDivision === $division) ? ' selected' : ''; ?>><?php echo htmlspecialchars($division); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            
+            <div class='button-group'>
+                <button type='submit' class='search-btn'>Search</button>
+                <?php if (!empty($searchTerm) || $filterType !== 'all' || !empty($filterGrade) || !empty($filterCode) || !empty($filterDivision)): ?>
+                    <a href='index.php' class='clear-filters'>Clear Filters</a>
+                <?php endif; ?>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Tabs for job results -->
+    <div class='tabs-container'>
+        <div class='tabs-nav'>
+            <button class='tab-btn active' data-tab='administration'>Administration Jobs (<?php echo count($allJobs['administration']); ?>)</button>
+            <button class='tab-btn' data-tab='licensed'>Licensed Jobs (<?php echo count($allJobs['licensed']); ?>)</button>
+            <button class='tab-btn' data-tab='support'>Support Jobs (<?php echo count($allJobs['support']); ?>)</button>
+        </div>
+        
+        <!-- Administration Jobs Tab -->
+        <div class='tab-content active' id='administration-tab'>
+            <div class='jobs-container'>
+                <?php foreach ($allJobs['administration'] as $job): ?>
+                    <div class='job-item admin-job'>
+                        <h3><?php echo htmlspecialchars($job['title']); ?></h3>
+                        <p><strong>Grade:</strong> <?php echo htmlspecialchars($job['grade']); ?></p>
+                        <p><strong>Code:</strong> <?php echo htmlspecialchars($job['ccode']); ?></p>
+                        <p><strong>Division:</strong> <?php echo htmlspecialchars($job['division']); ?></p>
+                        <p><strong>Description:</strong> <?php echo htmlspecialchars($job['description']); ?></p>
+                        <?php if (!empty($job['filename'])): ?>
+                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                        <?php endif; ?>
+                        <span class='job-type'>Administration</span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Licensed Jobs Tab -->
+        <div class='tab-content' id='licensed-tab'>
+            <div class='jobs-container'>
+                <?php foreach ($allJobs['licensed'] as $job): ?>
+                    <div class='job-item licensed-job'>
+                        <h3><?php echo htmlspecialchars($job['title']); ?></h3>
+                        <?php if (!empty($job['job_id'])): ?>
+                            <p><strong>Job ID:</strong> <?php echo htmlspecialchars($job['job_id']); ?></p>
+                        <?php endif; ?>
+                        <p><strong>Category:</strong> <?php echo htmlspecialchars($job['category']); ?></p>
+                        <p><strong>Division:</strong> <?php echo htmlspecialchars($job['division']); ?></p>
+                        <p><strong>Certification:</strong> <?php echo htmlspecialchars($job['certification_type']); ?></p>
+                        <?php if (!empty($job['filename'])): ?>
+                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($job['salary_code'])): ?>
+                            <p><strong>Salary Code:</strong> <?php echo htmlspecialchars($job['salary_code']); ?></p>
+                        <?php endif; ?>
+                        <span class='job-type'>Licensed</span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        
+        <!-- Support Jobs Tab -->
+        <div class='tab-content' id='support-tab'>
+            <div class='jobs-container'>
+                <?php foreach ($allJobs['support'] as $job): ?>
+                    <div class='job-item support-job'>
+                        <h3><?php echo htmlspecialchars($job['title']); ?></h3>
+                        <?php if (!empty($job['grade'])): ?>
+                            <p><strong>Grade:</strong> <?php echo htmlspecialchars($job['grade']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($job['job_code'])): ?>
+                            <p><strong>Job Code:</strong> <?php echo htmlspecialchars($job['job_code']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($job['department_code'])): ?>
+                            <p><strong>Department:</strong> <?php echo htmlspecialchars($job['department_code']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($job['union_code'])): ?>
+                            <p><strong>Union Code:</strong> <?php echo htmlspecialchars($job['union_code']); ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($job['filename'])): ?>
+                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                        <?php endif; ?>
+                        <span class='job-type'>Support</span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    
+    <?php endif; ?>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(targetTab + '-tab').classList.add('active');
+            });
+        });
+    });
+    </script>
 </body>
 </html>
