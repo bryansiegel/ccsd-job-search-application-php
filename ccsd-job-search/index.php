@@ -75,11 +75,13 @@ try {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <?php if (isset($error)): ?>
+<div style="margin-left:100px; margin-right: 100px;">
+<?php if (isset($error)): ?>
         <div style="color: red; text-align: center; margin: 20px;">
             <?php echo $error; ?>
         </div>
     <?php else: ?>
+
     
     <h1>CCSD Job Search Portal</h1>
     
@@ -121,10 +123,24 @@ try {
             <p><em>Total Available Jobs:</em></p>
         <?php endif; ?>
         
-        <p><strong>Administration Jobs:</strong> <?php echo $jobCounts['administration']; ?></p>
-        <p><strong>Licensed Jobs:</strong> <?php echo $jobCounts['licensed']; ?></p>
-        <p><strong>Support Jobs:</strong> <?php echo $jobCounts['support']; ?></p>
-        <p><strong>Total Jobs:</strong> <?php echo $jobCounts['total']; ?></p>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number"><?php echo $jobCounts['administration']; ?></div>
+                <p class="stat-label">Administration Jobs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><?php echo $jobCounts['licensed']; ?></div>
+                <p class="stat-label">Licensed Jobs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><?php echo $jobCounts['support']; ?></div>
+                <p class="stat-label">Support Jobs</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number"><?php echo $jobCounts['total']; ?></div>
+                <p class="stat-label">Total Jobs</p>
+            </div>
+        </div>
     </div>
     
     <!-- Search and Filter Form -->
@@ -261,6 +277,8 @@ try {
             </div>
         </div>
     </div>
+
+</div>
     
     <?php endif; ?>
     

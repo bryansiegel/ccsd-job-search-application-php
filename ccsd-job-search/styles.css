@@ -251,19 +251,72 @@ h1 {
 }
 
 .summary-stats {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #007bbf 0%, #005a8a 100%);
+    color: white;
+    padding: 40px 20px;
     margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .summary-stats h2 {
-    color: #34495e;
+    color: white;
     margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    grid-column: 1 / -1;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.search-status, .filter-status {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border-left: 4px solid #fff;
+    grid-column: 1 / -1;
 }
 
 .job-section {
@@ -364,7 +417,21 @@ h1 {
     }
     
     .summary-stats {
-        margin: 0 10px 20px 10px;
+        margin: 0 0 20px 0;
+        padding: 30px 15px;
+    }
+    
+    .summary-stats h2 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
