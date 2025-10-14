@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bd7ef350-194b-4531-b025-021311549bf2" name="ccsd.net" url="https://ccsd.net">
+        <fileTransfer rootFolder="/net_storage/ccsd" accessType="SFTP" host="10.49.51.14" port="22" sshConfigId="9047fba4-e008-4880-82f5-cfad4d197275" sshConfig="ccsd.net" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,73 @@
+<?php
+
+// $live_board_meeting = 1;
+
+//NON-VEGAS PBS SPECIAL EVENT
+if (date('U') > 1597964400  && date('U') < 1597970400) { ?>
+	<section class="live-stream-notification">
+
+		<!-- Spanish Only -->
+			<p><a id="board-meeting-stream" href="/virtualtownhall/">Junta comunitaria virtual con el superintendente "Java with Jara" - Solo en español</a></p> 	
+
+		<!-- English Version -->
+			<!-- <p><strong>Java With Jara Virtual Town Hall:</strong> <a id="board-meeting-stream" href="/virtualtownhall/">View the virtual town hall</a></p>	 -->
+			
+	</section>
+<?php }
+
+
+
+//VEGASPBS SPECIAL EVENT
+elseif (date('U') > 1608080400 && date('U') < 1608112800) {
+    if ($live_board_meeting) { ?>
+                <section class="live-stream-notification">
+                        <p><strong>Special Board Meeting:</strong>  View the stream on <a href="https://ccsd.eduvision.tv/live.aspx">Eduvision</a> or <a href="https://www.facebook.com/ClarkCountySchoolDistrict/live/">Facebook</a></p>
+        </section>
+        <?php }
+}
+
+
+
+//VEGASPBS SPECIAL EVENT WITH SPANISH
+elseif (date('U') > 1603841400 && date('U') < 1603868398) {
+    if ($live_board_meeting) { ?>
+                <section class="live-stream-notification">
+<!-- Spanish Version -->
+
+<div class="board-meeting-alert-header">Live Streaming of the School Naming Committee Meeting</div>
+
+                <div class="board-meeting-language"> <p><strong>English:</strong> <a href="https://ccsd.eduvision.tv/live.aspx">Eduvision</a> or <a href="https://www.facebook.com/ClarkCountySchoolDistrict/live/">Facebook</a>&nbsp;&nbsp;<strong>Español:</strong> <a href="https://ccsd.eduvision.tv/LiveChannelPlayer.aspx?qev=6zseFFegtzjNZq8essXM9Q%253d%253d">Eduvision</a></p></div>        
+               
+        </section>
+        <?php }
+}
+
+
+
+
+//NORMAL BOARD MEETING
+else {
+    if ($live_board_meeting) { ?>
+		<section class="live-stream-notification">
+		
+  <!-- English Version  -->
+
+<!--       <p><strong>Live Streaming of the School Board Meeting:</strong> View the stream on <a href="https://ccsd.eduvision.tv/live.aspx">Eduvision</a> or <a href="https://www.facebook.com/ClarkCountySchoolDistrict/live/">Facebook</a></p>
+<div class="board-meeting-disclaimer">If you're having trouble viewing the live stream, call 702-799-2988</div>  -->
+
+
+   <!-- Spanish Version -->
+   
+<div class="board-meeting-alert-header">Live Streaming of the School Board Meeting</div>
+
+		<div class="board-meeting-language"> <p><strong>English:</strong> <a href="https://ccsd.eduvision.tv/live.aspx">Eduvision</a> or <a href="https://www.facebook.com/ClarkCountySchoolDistrict/live/">Facebook</a>&nbsp;&nbsp;<strong>Español:</strong> <a href="https://ccsd.eduvision.tv/LiveChannelPlayer.aspx?qev=6zseFFegtzjNZq8essXM9Q%253d%253d">Eduvision</a></p></div>
+       
+        <div class="board-meeting-disclaimer-spanish"><p>If you’re having trouble viewing the live stream in English, call 702-799-2988. If you have problems with the link in Spanish, call (702) 855-9646 and use code 776225 to access the meeting exclusively with audio.</p>
+
+        <p>Si tiene problemas con el link en español, llame al (702) 855-9646 y use la clave 776225 para accesar la junta exclusivamente con audio. Por favor ponga su teléfono en silencio cuando entre la llamada.</p></div> 
+
+   
+		</section>
+	<?php }
+}
+?>

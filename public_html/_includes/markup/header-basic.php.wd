@@ -1,0 +1,56 @@
+<?php
+
+
+include(dirname(__FILE__).'/header-doctype.php');
+include(dirname(__FILE__).'/header-head.php');
+?>
+<style>
+.border {
+	border-style: solid solid none;
+	border-width:1px;
+	color: #ccc;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+</style>
+
+<body class="internal">
+<?php if(webdorks() && strstr($_SERVER['HTTP_HOST'], 'ccsd.dev')) { include(dirname(__FILE__).'/webdorks-toolbar.php'); } ?>
+
+<?php if(isset($user->username)) { ?>
+	<?php //if(count($user->nav)>=2) { ?>
+		<div style="z-index: 5; position: fixed; top: 0; background-color: #5588bb; border-top: 1px solid #77aadd; border-bottom: 1px solid #336699; padding: 10px 0; width: 100%; text-align: right;">
+			<div style="width: 960px; margin: 0 auto;">
+				<select onchange="if(this.value!='') { window.location.href = this.value; }">
+					<option value="">Navigation...</option>
+					<? foreach($user->nav as $uri => $label) { ?>
+					<option value="<?php echo $uri; ?>"><?=$label; ?></option>
+					<? } ?>
+				</select>
+			</div>
+			<?php if(!empty($_SESSION)) echo date('M d Y H:i:s', $_SESSION['user']['timeout']); ?>
+		</div>
+	<?php //} ?>
+<?php } ?>
+		
+		
+	<div id="top_wrap">
+		<!-- header -->
+		<header style="margin-top: 80px;">
+			<div class="logo-wrap"><a href="/"><img src="<?=$home->cdnimg; ?>/ccsd-logo-header.gif" alt="CCSD logo" width="339" height="35" /></a></div>
+			<?php if(isset($user->username)) { ?>
+			<div style="width: 300px; float: right; text-align: right;">
+							<div style="color: #999; margin-bottom: 1em; padding-top: 10px;"><span>Welcome, <?php echo $user->givenname; ?></span> | <span style="font-weight: bold;"><a href="?_logout">Logout</a></span></div>
+				<!--<?php if(count($user->nav)>=2) { ?>
+				<select style="float: right;" onchange="if(this.value!='') { window.location.href = this.value; }">
+					<option value="">Navigation...</option>
+				<?php foreach($user->nav as $uri => $label) { ?>
+					<option value="<?php echo $uri; ?>"><?php echo $label; ?></option>
+					<?php } ?>
+				</select>
+				<?php } ?>-->
+			</div>
+			<?php } ?>
+		</header> <!-- / header -->
+	</div><!-- / top_wrap -->
+	

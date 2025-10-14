@@ -1,0 +1,30 @@
+<?php
+
+//NON-VEGAS PBS SPECIAL EVENT
+if (date('U') > 1590621300 && date('U') < 1590625800) { ?>
+	<section class="live-stream-notification">
+			<p><strong>Java With Jara Virtual Town Hall:</strong> <a id="board-meeting-stream" href="/virtualtownhall/">View the virtual town hall</a></p>	
+	</section>
+<?php }
+
+
+//VEGASPBS SPECIAL EVENT
+elseif (date('U') > 1589378400 && date('U') < 1589389400) { 
+    if ($live_board_meeting) { ?>
+		<section class="live-stream-notification">
+			<p><strong>Vegas PBS Special Event:</strong> <a id="board-meeting-stream" href="#">View the event livestream</a></p>	
+	</section>
+	<?php } 
+}
+
+
+
+//NORMAL BOARD MEETING
+else {
+    if ($live_board_meeting) { ?>
+		<section class="live-stream-notification">
+        <p><strong>Due to technical difficulties, the board meeting will start at 9 am.</p>
+		</section>
+	<?php }
+}
+?>

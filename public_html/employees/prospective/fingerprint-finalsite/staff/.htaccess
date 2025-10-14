@@ -1,0 +1,11 @@
+# .htaccess
+# please double check your work and test
+
+deny from all
+allow from 206.194.49.11
+AuthName "Staff"
+AuthType Basic
+AuthUserFile /www/apache/conf/users
+
+require user finger
+satisfy any

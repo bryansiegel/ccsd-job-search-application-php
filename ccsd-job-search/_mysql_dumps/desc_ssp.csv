@@ -1,0 +1,752 @@
+Varies,Title I Cluster,0011,0011.pdf,T,7
+31,School Police Officer,0021,police/School_Police_Officer.pdf,S,8
+31-H,School Police Officer - Part Time,0022,0022pdf,Police,8
+33,School Police Sergeant,0023,police/School_Police_Sergeant.pdf,Police,8
+32,School Police Detective,0025,0025.pdf,Police,8
+31,School Police Officer/InLieu/Qualified Out-of-State,0026,0026.pdf,Police,8
+31,School Police Officer / Lateral,0033,0033.pdf,Police,8
+31,School Police Officer / Recruit,0034,0034.pdf,Police,8
+54,School Health Assistant I,0092,0092.pdf,S,7
+56,School Health Assistant II,0093,0093.pdf,S,7
+53,Specialized Employee Health Nurse,0096,0096.pdf,S,7
+59,Specialized Procedures Nurse,0097,0097.pdf,S,7
+40,School Aide - Bilingual,0099,"","",7
+40,School Aide,0100,6131.pdf,S,7
+40,Support Professional Assistant (Steps E-H),0101,0101.pdf,S,6
+41-D,Temporary Transportation Aide-Special Education,0102,0102.pdf,T,7
+43,Transportation Aide-Special Education,0104,0104.pdf,T,7
+40,Library Aide,0105,KP/Library_Aide.pdf,L,7
+44,Title I - Library Assistant III (School-Wide),0108,TU/Title_I_Library_Assistant_III.pdf,T,7
+47,Title I - Library Assistant IV (School-Wide),0109,TU/Title_I_Library_Assistant_IV.pdf,T,7
+40,Clerk Typist I,0110,0110.pdf,C,1
+40,Clerk Typist I - Bilingual,0115,0115.pdf,C,1
+42,Clerk Typist II,0116,0116.pdf,C,1
+42,Clerk Typist II - Bilingual,0117,0117.pdf,C,1
+45-B,Temporary Clerical Assistant,0122,TU/Temporary_Clerical_Assistant.pdf,T,6
+45,Office Specialist II,0123,0123.pdf,O,1
+46,Information Liaison,0124,0124.pdf,I,1
+45,Office Specialist II - Bilingual,0126,0126.pdf,"",1
+43,Office Specialist I,0127,0127.pdf,O,1
+43,Office Specialist I - Bilingual,0128,0128.pdf,O,1
+54,Magnet Application Data Specialist,0130,0130.pdf,M,1
+50,Related Services Personnel Specialist,0131,0131.pdf,R,1
+47-B,Temporary Personnel Assistant,0132,0132.pdf,T,1
+46,Intake Clerk,0133,0133.pdf,I,1
+"",Benefits Technician,0134,"",B,3
+47,Personnel Assistant,0136,0136.pdf,P,1
+46,Senior Documents Clerk,0137,QS/Senior_Documents_Clerk.pdf,S,1
+47,Personnel Assistant - Bilingual,0138,0138.pdf,P,1
+48,Special Education Intervention Specialist I,0139,0139.pdf,S,7
+45,Autism Intervention Specialist I,0140,"",A,7
+48,Autism Intervention Specialist II,0141,0141.pdf,A,7
+50,School / Community Liaison,0142,"",S,7
+46,Elementary School Clerk,0143,0143.pdf,E,1
+40,School / Community Facilitator,0144,QS/School_Community_Facilitator.pdf,S,7
+45,Registrar I,0145,0145.pdf,R,1
+46,Registrar II,0146,0146.pdf,R,1
+57,Recruiter,0147,0147.pdf,R,1
+57,Recruiter- Bilingual,0148,0148.pdf,R,1
+52,Title I - FACES - Family/School Engagement Liaison - Bilingual,0149,0149.pdf,T,7
+56,Recruitment Marketing Specialist,0150,0150.pdf,R,1
+54,Title I - Family Outreach Specialist/Family and Community Engagement Services (FACES),0151,0151.pdf,T,7
+52,Family/School Engagement Liaison,0152,0152.pdf,F,7
+52,FACES - Family/School Engagement Liaison - Bilingual,0153,0153.pdf,F,7
+52,Title I - FACES - Family/School Engagement Liaison,0154,0154.pdf,T,7
+49,"School-Community Partnership - Safe Routes to School, School/Community Liaison",0155,0155.pdf,S,7
+54,Team and Family Advocate,0156,0156.pdf,T,7
+52,Title III - Family Outreach Liaison,0157,0157.pdf,T,7
+45,Title I - Specialized Programs Teacher Assistant III (School-Wide),0158,TU/Title_I_Specialized_Program_Teacher_III_SW.pdf,T,7
+47,Title I - Specialized Programs Teacher Assistant IV (School-Wide),0159,TU/Title_I_Specialized_Program_Teacher_IV_SW.pdf,T,7
+41,Specialized Programs Teacher Assistant,0160,QS/Specialized_Programs_Teacher_Assistant.pdf,S,7
+45,Sign Language Aide,0161,QS/Sign_Language_Aide.pdf,S,7
+44,Specialized Programs Teacher Assistant II,0162,QS/Specialized_Programs_Teacher_Assistant_II.pdf,S,7
+41,In-House Suspension Teacher Aide,0165,GJ/InHouse_Suspension_Teacher_Aide.pdf,I,7
+46,Special Schools - Title I Specialized Programs Teacher Assistant (SPTA) III - SS1,0166,166.pdf,T,7
+47,Special Schools - Title I Specialized Programs Teacher Assistant (SPTA) III - SS2,0167,167.pdf,T,7
+45,Title I - In-House Suspension Teacher Assistant III (School-Wide),0168,TU/Title_I_InHouse_Suspension_Teacher_Assistant_III.pdf,T,7
+47,Title I - In-House Suspension Teacher Assistant IV (School-Wide),0169,TU/Title_I_InHouse_Suspension_Teacher_Assistant_IV.pdf,T,7
+52,Braillist,0170,AB/Braillist.pdf,B,7
+40,Instructional Assistant - Bilingual,0172,GJ/Instructional_Assistant_Bilingual.pdf,I,7
+48,Special Schools - Title I Specialized Programs Teacher Assistant (SPTA) IV - SS1,0173,173.pdf,T,7
+49,Special Schools - Title I Specialized Programs Teacher Assistant (SPTA) IV - SS2,0174,174.pdf,T,7
+45,Braille Program Assistant,0175,0175.pdf,C,1
+47,Broadcast Captionist I,0176,AB/Broadcast_Captionist_I.pdf,B,2
+52,Broadcast Captionist II,0177,AB/Broadcast_Captionist_II.pdf,B,2
+56,Broadcast Captionist III,0178,AB/Broadcast_Captionist_III.pdf,B,2
+40,Instructional Assistant - Physical Education,0179,GJ/Instr_Asst_Physical_Edu.pdf,I,7
+44,Title I - Instructional Assistant III - Physical Education,0180,TU/Title_I_lnstructional_Assistant_III_PE.pdf,T,7
+46,Principal Operations Support Clerk,0181,0181.pdf,P,1
+46,Title I - Sign Language Aide III (School-Wide),0182,TU/Title_I_Sign_Language_Aide_III.pdf,T,7
+48,Title I - Sign Language Aide IV (School-Wide),0183,TU/Title_I_Sign_Language_Aide_IV.pdf,T,7
+45,Title I - Instructional Assistant IV - Physical Education,0184,TU/Title_I_lnstructional_Assistant_IV_PE.pdf,T,7
+43,Federal Programs Teacher / Family Aide,0185,EF/Federal_Programs_Teacher_Family_Aide.pdf,F,7
+44,Title I - Instructional Assistant III - Least Restrictive Environment (LRE),0186,TU/Title_I_lnstructional_Assistant_III_LRE.pdf,T,7
+45,Title I - Instructional Assistant IV - Least Restrictive Environment (LRE),0187,TU/Title_I_lnstructional_Assistant_IV_LRE.pdf,T,7
+46,Title I - Teacher / Family Assistant III (School-Wide),0188,0188.pdf,T,7
+48,Title I - Teacher / Family Assistant IV (School-Wide),0189,TU/Title_I_Teacher_Family_Assistant_IV_SW.pdf,T,7
+40,Instructional Assistant - Teacher Aide,0190,GJ/Instructional_Assistant_Teacher_Aide.pdf,I,7
+40,Instructional Assistant - Least Restrictive Environment,0192,GJ/Instructional_Assistant_Least_Restrictive_Environment.pdf,I,7
+44,Parent / Guardian Mentor,0194,KP/Parent_Guardian_Mentor.pdf,P,7
+44,Infant / Toddler Day Care Aide,0195,GJ/Infant_Toddler_DayCare_Aide.pdf,I,7
+44,Title I - Instructional Assistant III (School-Wide),0198,TU/Title_I_lnstructional_Assistant_III.pdf,T,7
+45,Title I - Instructional Assistant IV (School-Wide),0199,TU/Title_I_lnstructional_Assistant_IV.pdf,T,7
+50,Administrative Clerk,0200,0200.pdf,A,1
+44,Title I - Instructional Assistant III - Bilingual,0201,"","",7
+45,Title I - Instructional Assistant IV - Bilingual,0202,"","",7
+46,Title I - Teacher/Family Assistant III - Bilingual (School-Wide),0203,"","",7
+48,Title I - Teacher/Family Assistant IV - Bilingual (School-Wide),0204,"","",7
+50,Title I - FACES - Family Learning Advocate,0205,0205.pdf,T,7
+51,Office Supervisor,0206,0206.pdf,O,1
+54,Title I - Family and Community Outreach Specialist,0207,0207.pdf,T,7
+50,Family Learning Advocate - Bilingual,0208,022125.pdf,F,7
+50,Administrative Clerk - Police Services,0209,0209.pdf,A,8
+46,Secretary II,0220,QS/Secretary_II.pdf,S,1
+46,Secretary II - Bilingual,0221,0221.pdf,S,1
+48,Secretary III,0230,QS/Secretary_III.pdf,S,1
+48,Secretary III - Bilingual,0231,0231.pdf,S,1
+53,Compliance Analyst,0235,0235.pdf,C,1
+55,Unemployment Services Claims Analyst,0236,0236.pdf,U,1
+51,Administrative Secretary I,0240,0240.pdf,A,1
+52,Administrative Secretary II,0250,0250.pdf,A,1
+54,Administrative Secretary III,0251,0251.pdf,A,1
+57,Executive Assistant to the Deputy Superintendent (Administrative Secretary IV),0252,0252.pdf,A,1
+57,Executive Assistant (Assistant to the Office of the Superintendent and Chief of Staff),0253,0253.pdf,E,1
+57,Executive Assistant to the Chief Communications Officer (Administrative Secretary IV),0254,0254.pdf,E,1
+46,Senior Maintenance Clerk,0255,0255.pdf,S,1
+57,Executive Assistant to the Chief Operating Officer (Administrative Secretary IV),0256,0256.pdf,E,1
+57,Executive Assistant to the Chief Human Resources Officer (Administrative Secretary IV),0257,0257.pdf,E,1
+57,Executive Assistant to the Chief Information Officer (Administrative Secretary IV),0258,0258.pdf,E,1
+57,Executive Assistant to the Chief Academic Officer (Administrative Secretary IV),0259,0259.pdf,E,1
+57,Executive Assistant to the Chief of Health and Student Services (Administrative Secretary IV),0260,0260.pdf,E,1
+46,Statistical Clerk,0265,0265.pdf,S,1
+46,Federal Projects Clerk,0270,EF/Federal_Projects_Clerk.pdf,F,1
+52,Technology Training Specialist,0275,TU/Technology_Training_Spec.pdf,T,1
+54,E-Rate Program Specialist,0276,0276.pdf,E,1
+52,Pre-Kindergarten Program/Placement Processor,0279,0279.pdf,P,1
+52,Student Program / Placement Processor,0280,QS/Student_Prg_Plmt_Proc.pdf,S,1
+52,Nevada Ready! State Pre-K Program/Placement Processor - Bilingual,0281,0281.pdf,N,1
+46,Document Request Specialist,0284,0284.pdf,D,1
+45,Information Processor ,0285,0285.pdf,I,1
+46,Records Processor,0286,0286.pdf,R,1
+45,Zoning Clerk,0290,VZ/Zoning_Clerk.pdf,Z,1
+46,Accessible Instructional Materials Assistant,0300,0300.pdf,A,7
+45,Vision Services Assistant I,0302,0302pdf,V,7
+47,Vision Services Assistant II,0304,0304.pdf,V,7
+48,Information Aide,0305,0305.pdf,I,1
+49,Communications Assistant,0306,0306.pdf,C,1
+46,School Banker,0307,0307.pdf,S,1
+55,School Office Manager K-12,0312,0312.pdf,S,1
+56,Business Services Specialist,0330,0330.pdf,B,3
+46,Transportation Routing & Scheduling Support Clerk ,0350,0350.pdf,T,1
+61,Senior Electronics Technician,0353,QS/Senior_Electronics_Technician.pdf,S,8
+46,Operations Clerk,0355,0355.pdf,O,1
+53,Transcriber / Recording Secretary ,0358,TU/Transcriber_Recording_Sec.pdf,T,1
+51,Legal Secretary II,0360,KP/Legal_Secretary_II.pdf,L,1
+48,Legal Secretary I,0365,0365.pdf,L,1
+54,Paralegal,0367,KP/Paralegal.pdf,P,1
+57,Executive Legal Assistant to the General Counsel,0371,0371.pdf,E,1
+47,Offset Machine Operator,1010,KP/Offset_Machine_Operator.pdf,O,13
+49,Senior Offset Machine Operator,1020,QS/Senior_Offset_Machine_Operator.pdf,S,13
+51,Offset Machine Operator Leader,1025,KP/Offset_Machine_Operator_Leader.pdf,O,13
+58,Graphic Arts Supervisor,1030,GJ/Graphic_Arts_Supervisor.pdf,G,13
+41,Dispatcher,1040,1040.pdf,O,13
+57,Media Specialist,1050,KP/Media_Specialist.pdf,M,13
+54,Assistant Offset Shop Supervisor,1060,1060.pdf,A,13
+54,Graphics Specialist,1100,GJ/Graphics_Specialist.pdf,G,13
+48,Graphic Artist Assistant,1105,GJ/Graphic_Artist_Assistant.pdf,G,13
+50,Graphic Artist I,1110,GJ/Graphic_Artist_I.pdf,G,13
+55,Graphic Artist II,1120,GJ/Graphic_Artist_II.pdf,G,13
+55,Digital/Visual Media and Graphic Artist II,1125,1125.pdf,D,13
+52,Photographer / Lithographer,1150,KP/Photographer_Lithographer.pdf,P,2
+59,Data Visualization Analyst I,1200,1200.pdf,D,5
+63,Data Visualization Analyst II - Data Focus,1201,1201.pdf,D,5
+63,Data Visualization Analyst II - Design Focus,1202,1202.pdf,D,5
+40,Instructional Assistant - Dance Program,1203,1203.pdf,I,7
+40,Instructional Assistant - Gardens,1204,1204.pdf,I,7
+40,Instructional Assistant - Instrumental Music Program,1205,1205.pdf,I,7
+40,Instructional Assistant - Piano Accompanist Program,1206,1206.pdf,I,7
+40,Instructional Assistant - Strings Program,1207,1207.pdf,I,7
+40,Instructional Assistant - Theater Performance Program,1208,1208.pdf,I,7
+40,Instructional Assistant - Theater Technician Program,1209,1209.pdf,I,7
+40,Instructional Assistant - Visual Arts Program,1210,1210.pdf,I,7
+40,Instructional Assistant - Vocal Music Program,1211,1211.pdf,I,7
+44,Title I - Instructional Assistant - Dance Program,1212,1212.pdf,T,7
+44,Title I - Instructional Assistant - Gardens,1213,1213.pdf,T,7
+44,Title I - Instructional Assistant - Instrumental Music Program,1214,1214.pdf,T,7
+44,Title I - Instructional Assistant - Piano Accompanist Program,1215,1215.pdf,T,7
+44,Title I - Instructional Assistant - Strings Program,1216,1216.pdf,T,7
+44,Title I - Instructional Assistant - Theater Performance Program,1217,1217.pdf,T,7
+44,Title I - Instructional Assistant - Theater Technician Program,1218,1218.pdf,T,7
+44,Title I - Instructional Assistant - Visual Arts Program,1219,1219.pdf,T,7
+44,Title I - Instructional Assistant - Vocal Music Program,1220,1220.pdf,T,7
+44,Title I - Instructional Assistant - Literacy and Language Program,1221,1221.pdf,T,7
+40,Instructional Assistant - Literacy and Language Program,1222,1222.pdf,I,7
+45,Title I - Literacy and Language Intervention Specialist,1223,1223.pdf,T,7
+46,Data Processing Machine Operator,1326,CD/Data_Processing_Machine_Operator.pdf,D,1
+51,Computer Systems Specialist,1330,1330.pdf,C,5
+"",Human Capital Management (HCM) Systems Specialist),1331,"",H,5
+58,Human Capital Management (HCM) System Functional Support Analyst,1332,1332.pdf,H,5
+62,Computer Operations Manager,1411,1411.pdf,C,5
+55,Mainframe Operations Scheduling Specialist,1425,KP/Mainframe_Operations_Scheduling_Specialist.pdf,M,5
+49,Warranty Program Clerk,1426,1426.pdf,W,1
+63,Applications Developer II - Identity Management (IDM),1427,1427.pdf,A,5
+51,Environmental Technician,1428,1428.pdf,E,11
+51,Senior Information Systems Operator,1435,1435.pdf,S,5
+65,Senior Information and Technology Security Manager,1436,1436.pdf,S,5
+58,Student Information Systems Specialist and Trainer,1437,1437.pdf,A,5
+64,Internet Operations Manager,1438,1438.pdf,I,5
+57,Cybersecurity Technician,1439,1439.pdf,C,5
+62,Cybersecurity Engineer Technical Specialist,1440,1440.pdf,C,5
+59,Governance Risk and Compliance Analyst,1441,1441.pdf,G,5
+58,Identity and Access Management Analyst,1442,1442.pdf,I,5
+58,Enterprise E-Learning and Training Specialist ,1443,1443.pdf,E,5
+57,Enterprise Instructional Design Specialist Trainer,1444,EF/Enterprise_Instructional_Design_Specialist_Trainer.pdf,E,5
+52,Microcomputer Support Specialist,1445,KP/Microcomputer_Support_Specialist.pdf,M,5
+56,Administrative Computer Services Specialist,1446,1446.pdf,A,5
+53,Information Systems Help Desk Specialist,1447,GJ/Information_Systems_Help_Desk_Specialist.pdf,I,5
+51,Student Information Systems Specialist,1448,QS/Student_Info_Systems_Specialist.pdf,S,1
+56,Assistive Technology Services Specialist II,1449,1449.pdf,A,5
+50,Assistive Technology Services Specialist I,1450,1450,A,5
+63,Applications Developer II - ABAP/NETWEAVER,1460,1460.pdf,A,5
+59,Applications Developer I - ABAP/NETWEAVER,1461,1461.pdf,A,5
+62,Systems Software Analyst,1464,QS/Systems_Software_Analyst.pdf,S,5
+59,Senior Programming Analyst,1472,QS/Senior_Programming_Analyst.pdf,S,5
+58,MIS / DP Technology Specialist,1473,KP/MIS_DP_Technology_Specialist.pdf,M,5
+55,Microcomputer Systems Specialist,1475,KP/Microcomputer_Systems_Specialist.pdf,M,5
+60,Information Systems Help Desk Manager,1477,GJ/Information_Systems_Help_Desk_Manager.pdf,I,5
+52,Help Desk Analyst I,1478,GJ/Help_Desk_Analyst_I.pdf,H,5
+55,Help Desk Analyst II,1479,1479.pdf,H,5
+48,Data Systems Operator,1482,1482.pdf,D,5
+58,Helpdesk Analyst III,1483,1483.pdf,H,5
+55,Facilities Data Analyst,1484,1484.pdf,F,5
+64,Facilities Data Systems Manager,1485,1485.pdf,F,5
+58,Data Research - Assessment Analyst,1487,1487.pdf,D,5
+58,Data Research-Behavior Analyst,1488,1488.pdf,D,5
+61,Data Services Systems Integration Specialist,1489,1489.pdf,D,5
+62,User Support Systems Product Specialist,1491,1491.pdf,U,5
+64,Security Systems Applications Manager,1492,QS/Security_Systems_Applications_Manager.pdf,S,8
+64,Security Systems Design Manager,1493,QS/Security_Systems_Design_Manager.pdf,S,8
+64,User Support Services Manager,1494,"","",5
+64,Technical Support Manager,1495,TU/Technical_Support_Manager.pdf,T,5
+58,Security Systems Support Technician,1496,QS/Security_Systems_Support_Technician.pdf,S,8
+60,User Support Services Help Desk Supervisor,1497,1497.pdf,U,5
+57,Computer Operations Lead,1501,1501.pdf,C,5
+64,Applications Manager - Payroll and Human Resources,1503,1503.pdf,A,5
+64,Applications Manager - Systems Applications and Products in Data Processing (SAP),1504,1504.pdf,A,5
+62,EDP Operations Manager,1505,EF/EDP_Operations_Manager.pdf,E,5
+54,Application Administrator I,1506,1506.pdf,A,5
+56,Application Administrator II,1507,1507.pdf,A,5
+64,Applications Manager,1508,1508.pdf,A,5
+62,Senior Systems Analyst,1509,QS/Senior_Systems_Analyst.pdf,S,5
+64,Business Intelligence (BI) Manager,1510,1510.pdf,B,5
+63,Business Intelligence (BI) Analyst,1511,AB/Business_Intelligence_Analyst.pdf,B,5
+64,Software Quality Assurance Manager,1512,QS/Software_Quality_Assurance_Manager.pdf,S,5
+62,Student Information System Enterprise Systems Integration Specialist,1513,1500/1513.pdf,E,5
+62,Student Information System Product Specialist,1514,1514.pdf,S,5
+63,Database Administrator,1515,CD/Database_Administrator.pdf,D,5
+62,Student Record Services Product Specialist,1516,1516.pdf,S,5
+62,Database Analyst III (Web-Based) - Facilities,1517,1517.pdf,D,5
+62,Database Analyst III (Web-based),1518,CD/Database_Analyst_III_Web.pdf,D,5
+62,Database Analyst III (Web-Based) Assessment and Accountability,1519,CD/Database_Analyst_III_Web_Based_AA.pdf,D,5
+62,Human Capital Management (HCM) Enterprise Systems Integration Specialist,1520,1520.pdf,H,5
+62,Database Analyst III - Special Education Management Systems (SEMS),1521,CD/Database_Analyst_III_SEMS.pdf,D,5
+56,Database Services Specialist,1526,1526.pdf,D,5
+60,Server Administrator II,1529,1529.pdf,S,5
+54,Technology Systems Specialist,1530,TU/Technology_Systems_Specialist.pdf,T,5
+59,Applications Developer - COBOL / CICS,1532,1532.pdf,A,5
+55,Web Designer / Programmer,1535,VZ/Web_Designer_Programmer.pdf,W,5
+59,Web Designer II,1536,VZ/Web_Designer_II.pdf,W,5
+62,Web Designer III,1537,VZ/Web_Designer_III.pdf,W,5
+59,Web Programmer II,1538,VZ/Web_Programmer_II.pdf,W,5
+62,Web Programmer III,1539,VZ/Web_Programmer_III.pdf,W,5
+57,Business Systems Security Specialist I,1540,1540.pdf,B,5
+58,Server Administrator I,1541,QS/Server_Administrator_I.pdf,S,5
+51,Information Control Specialist,1542,GJ/Information_Control_Specialist.pdf,I,5
+57,Web Designer I,1543,1543.pdf,W,5
+57,Web Programmer I,1544,1544.pdf,W,5
+52,Server Technician I,1545,QS/Server_Technician_I.pdf,S,5
+64,Voice Communication Network Manager,1546,VZ/Voice_Communication_Network_Manager.pdf,V,5
+61,Voice Communication Network Supervisor,1547,VZ/Voice_Communication_Network_Supervisor.pdf,V,5
+58,Network Design Technician III,1548,"","",5
+62,Server Administrator III,1549,1549.pdf,S,5
+60,Basis Administrator I,1550,AB/Basis_Administrator_I.pdf,B,5
+62,Basis Administrator II,1551,1551.pdf,B,5
+52-B,Computer Technician - Entry Level,1552,1552.pdf,C,5
+58,Server Technician III,1553,QS/Server_Technician_III.pdf,S,5
+55,Server Technician II,1554,QS/Server_Technician_II.pdf,S,5
+52,Computer Technician I,1555,1555.pdf,C,5
+55,Computer Technician II,1556,1556.pdf,C,5
+58,Computer Technician III,1557,1557.pdf,C,5
+52,Network Technician I,1558,KP/Network_Technician_I.pdf,N,5
+55,Network Technician II,1559,KP/Network_Technician_II.pdf,N,5
+58,Network Technician III,1560,KP/Network_Technician_III.pdf,N,5
+60,Technology and Information System Services Database Administrator I,1561,1561.pdf,T,5
+62,Technology and Information System Services Database Administrator II,1562,1562.pdf,T,5
+63,Technology and Information System Services Database Administrator III,1563,1563.pdf,T,5
+59,Business Systems Security Specialist II,1564,1564.pdf,B,5
+64,Technology and Information System Services Database Administration Manager,1565,1565.pdf,T,5
+64,Systems Administration Manager,1566,1566.pdf,S,5
+64,Network Infrastructure Integration Manager,1567,1567.pdf,N,5
+61,Network Design Technician IV,1568,1568.pdf,N,5
+64,Network Infrastructure Design Manager,1570,1570.pdf,N,5
+64,Network Operations Manager,1571,1571.pdf,N,5
+58,Emerging Technology Specialist,1572,1572.pdf,E,5
+62,Senior Emerging Technology Specialist,1573,1573.pdf,S,5
+65,Emerging Technology Manager,1574,1574.pdf,E,5
+55,School-Based Computer Technician II,1666,1666.pdf,S,5
+49,Accounts Payable Technician,2016,2016.pdf,A,3
+54,Accounts Payable Supervisor,2027,2027.pdf,A,3
+54,Personnel Paydata Supervisor,2031,KP/Personnel_Paydata_Supervisor.pdf,P,1
+56,Accountant ,2040,2040.pdf,A,3
+51,Business and Finance Intern (Steps B-E),2041,2041.pdf,B,3
+57,Benefits Accountant,2042,2042.pdf,B,3
+54,Junior Accountant,2045,GJ/Junior_Accountant.pdf,J,3
+50,Assistant Accountant,2050,2050.pdf,A,3
+57,Organizational Management Business Specialist,2085,KP/Organizational_Mngt_Bus_Specialist.pdf,O,3
+62,Risk Management Field Investigation Supervisor,2096,1442.pdf,R,3
+62,Risk Control / Safety Manager,2097,QS/Risk_Control_Safety_Manager.pdf,R,3
+60,Claims Manager,2098,2098.pdf,C,3
+57,Senior Claims Examiner,2099,QS/Senior_Claims_Examiner.pdf,S,3
+57,Claims Management Specialist,2100,2100.pdf,C,3
+58,Senior Risk Control Analyst,2101,2101.pdf,S,3
+48,Claims Technician,2102,2102.pdf,C,3
+52,Claims Examiner,2103,2103.pdf,C,3
+48,Risk Services Technician,2104,2104.pdf,R,3
+51,Playground Technician,2107,2107.pdf,P,3
+53,Insurance Analyst,2108,2108.pdf,I,3
+54,Risk Services Analyst,2109,QS/Risk_Services_Analyst.pdf,R,3
+60,Playground Compliance Inspector,2110,2110.pdf,P,11
+57,Safety and Equipment Inspector,2111,2111pdf,S,3
+62,Insurance Services Manager ,2112,GJ/Insurance_Services_Manager.pdf,I,3
+57,Senior Risk Services Analyst,2113,QS/Senior_Risk_Services_Analyst.pdf,S,3
+54,Air Quality Management Technician I,2114,2114.pdf,A,3
+56,Hazardous Materials Field Technician I,2117,2117.pdf,H,3
+57,Environmental Project Monitor,2118,2118.pdf,E,3
+"",Environmental Project Monitor Supervisor,2119,"",E,3
+"",Payroll Technician II,2120,"",P,3
+56,Absence Management Specialist,2121,2121.pdf,A,3
+56,Benefits/Payroll Management Specialist,2122,2122.pdf,B,7
+"",Payroll Technician I,2125,"",P,3
+45,Warehouser I,3000,3000.pdf,W,9
+45-B,Temporary Warehouser I,3001,3001.pdf,T,9
+47,Warehouser II,3010,3010.pdf,W,9
+47,Inventory Control Clerk,3015,3015.pdf,I,9
+59,Logistics and Inventory Control Manager,3017,3017.pdf,I,9
+53,Senior Warehouser,3020,3020.pdf,S,9
+50,Distribution Specialist I,3021,3021.pdf,D,9
+55,Payroll Processing Specialist,3023,3023.pdf,P,3
+53,Benefits Analyst,3024,3024.pdf,B,3
+60,Purchasing Supervisor,3025,KP/Purchasing_Supervisor.pdf,P,3
+56,Payroll Assistant,3026,3026.pdf,P,3
+62,Purchasing Supervisor II,3027,KP/Purchasing_Supervisor_II.pdf,P,3
+53,Payroll Analyst,3028,"3028,pdf",P,3
+50,Truck Driver,3040,TU/Truck_Driver.pdf,T,9
+52,Senior Truck Driver,3050,3050.pdf,S,9
+49,Buyer I,3081,AB/Buyer_I.pdf,B,3
+52,Buyer II,3082,AB/Buyer_II.pdf,B,3
+54,Buyer III,3084,AB/Buyer_III.pdf,B,3
+57,Buyer IV,3086,AB/Buyer_IV.pdf,B,3
+50,Food Service Truck Driver,3089,3089.pdf,F,9
+53,Heavy Truck Driver,3090,3090.pdf,H,9
+53-B,Temporary Heavy Truck Driver,3091,3091.pdf,T,9
+54,Film and Video Traffic Supervisor,3120,EF/Film_Video_Traffic_Supervisor.pdf,F,2
+56,Educational Media Center Supervisor,3121,EF/Educational_Media_Center_Supervisor.pdf,E,2
+47,Vegas PBS - Media/Library Specialist,3122,3122.pdf,V,2
+55,Vegas PBS - Graphic Artist,3123,3123.pdf,V,2
+55,Vegas PBS - Media Communications Specialist,3124,3124.pdf,V,2
+52,Facilities & Equipment Safety Inspector,3200,EF/Facilities_Equipment_Safety_Inspector.pdf,F,11
+57,Facilities & Equipment Safety Inspection Manager,3240,EF/Facilities_Equipment_Safety_Inspection_Manager.pdf,F,11
+57,Mail Services Manager,3400,3400.pdf,M,9
+55,Food Service Transportation Operations Supervisor,3900,3900.pdf,F,4
+60,Food Service Transportation Operations Manager,3901,3901.pdf,F,4
+50,Attendance Officer,4000,4000.pdf,A,7
+53,Senior Attendance Officer,4010,QS/Senior_Attendance_Officer.pdf,S,7
+48,Security Specialist,4025,QS/Security_Specialist.pdf,S,8
+47,Fingerprint Technician,4053,EF/Fingerprint_Technician.pdf,F,8
+51,Lead Fingerprint Technician,4054,4054.pdf,L,8
+51,Police Services Timekeeping Specialist,4055,4055.pdf,P,8
+56,Police Communications Specialist I,4056,4056.pdf,P,8
+58,Police Communications Specialist II,4057,4057.pdf,P,8
+58,Equip Req Funds Analysis/Forms Mgmt Supv,4065,EF/Equip_Req_Fds_AnalysisForms_Mgt_Supv.pdf,E,3
+58,Standards Specialist,4070,QS/Standards_Specialist.pdf,S,3
+52,Equipment Specialist,4090,EF/Equipment_Specialist.pdf,E,3
+55,Budget Assistant,4100,4100.pdf,B,3
+57,Finance Assistant (Assistant to the Chief Financial Officer),4101,4101.pdf,F,3
+55,Accounting Specialist,4102,4102.pdf,A,3
+57,"Budget and Grant Specialist, Student Services Division",4103,4103.pdf,B,3
+56,District Budget Management Specialist,4104,4104.pdf,D,3
+58,Administrative School Banking Specialist,4105,4105.pdf,A,3
+56,Realty Specialist,4110,QS/Realty_Specialist.pdf,R,11
+"",School Police Dispatcher Supervisor,4140,QS/School_Police_Dispatcher_Supervisor.pdf,S,8
+"",School Police Lead Dispatcher,4143,4143.pdf,S,8
+47,Dispatcher,4150,CD/Dispatcher.pdf,D,8
+52,Campus Security Monitor,4170,4170.pdf,C,7
+56,Associate International Recruiter - Bilingual,4194,4194.pdf,A,1
+53,Associate Recruiter,4195,4195.pdf,A,1
+51,Human Resources (HR) Records Technician,4196,4196.pdf,H,1
+60,Human Resources Information System (HRIS) Analyst,4197,4197.pdf,H,1
+54,Human Resources Division (HRD) Junior Accountant Payroll Specialist,4198,4198.pdf,H,1
+57,Human Resources Unit Manager,4199,4199.pdf,H,1
+53,Office Manager,4200,4200.pdf,O,1
+50,21st Century Community Learning Center (CLC) Grant - After School Site Manager,4201,4201.pdf,2,1
+50,Shania Kids Can (SKC) - Program Leader,4202,4202.pdf,S,1
+55,Staff Trainer Supervisor - Human Resources,4205,4205.pdf,S,1
+51,Staff Trainer - Human Resources,4215,4215.pdf,S,1
+"",SB 515 - Social Worker/Mental Health Assistant,4219,"",S,7
+49,Student Success Advocate,4220,QS/Student_Success_Advocate.pdf,S,7
+50,Physical Therapist Assistant,4221,KP/Physical_Therapist_Assistant.pdf,P,7
+50,Certified Occupational Therapy Assistant,4222,CD/Certified_Occupational_Therapy_Assistant.pdf,C,7
+49,Psychological Services Assistant,4225,KP/Psychological_Services_Assistant.pdf,P,7
+49,Intervention Specialist,4227,4227.pdf,I,7
+49,Personal Care Assistant I,4228,4228.pdf,P,7
+49,Student Success Advocate (Bilingual),4229,QS/Student_Success_Advocate_Bilingual.pdf,S,7
+52,Safe Routes to School - K-12 School/Community Liaison,4230,4230.pdf,S,7
+54,Educational Transcriber,4231,EF/Educational_Transcriber.pdf,E,7
+49,Student Success Advocate - Indian Education,4232,4232.pdf,S,7
+48,Autism Family Support and Intensive Behavior Technician I,4233,4233.pdf,A,7
+51,Autism Family Support and Intensive Behavior Technician II,4234,4234.pdf,A,7
+48,Peer Recovery Specialist,4235,4235.pdf,P,7
+46,Educational Interpreter I ,4240,EF/Educational_Interpreter_I.pdf,E,7
+53,Educational Interpreter II,4241,EF/Educational_Interpreter_II.pdf,E,7
+54,Educational Interpreter III,4242,EF/Educational_Interpreter_III.pdf,E,7
+55,Educational Interpreter IV,4243,EF/Educational_Interpreter_IV.pdf,E,7
+59,Interpreter Specialist,4245,GJ/Interpreter_Specialist.pdf,I,7
+47,Speech-Language Assistant I,4246,4246.pdf,S,7
+49,Speech-Language Assistant II,4247,4247.pdf,S,7
+51,Bilingual Translator / Interpreter,4248,AB/Bilingual_Translator_Interpreter.pdf,B,7
+51,Safety and Health Lab Technician,4250,QS/Safety_Health_Laboratory_Technician.pdf,S,11
+49,Personnel Paydata Specialist,4252,KP/Personnel_Paydata_Specialist.pdf,P,1
+59,Support Professional Training Lead - Student Services Division,4253,4253.pdf,S,7
+50,Sample Control Clerk,4256,4256.pdf,S,1
+56,Construction Documents Manager,4260,4260.pdf,C,1
+55,Theater Manager,4270,TU/Theater_Manager.pdf,T,2
+40,Instructional Assistant LRE(Site Funded),4271,4271.pdf,I,7
+40,Instructional Assistant LRE(Grant Funded),4272,4272.pdf,I,7
+44,Title I Instructional Assistant III LRE (Site Funded),4273,4273.pdf,T,7
+44,Title I Instructional Assistant III LRE (Grant Funded),4274,4244.pdf,T,7
+45,Title I Instructional Assistant IV LRE (Site Funded),4275,4275.pdf,T,7
+45,Title I Instructional Assistant IV LRE (Grant Funded),4276,4276.pff,T,7
+57,Retirement Administration Specialist,4281,4281.pdf,R,1
+53-B,Temporary Personnel Analyst,4282,4282.pdf,T,1
+53,Personnel Analyst,4283,KP/Personnel_Analyst.pdf,P,1
+53,Personnel Analyst - Bilingual,4284,4284.pdf,P,1
+57,Classification / Compensation Analyst,4285,4285.pdf,C,1
+53,Employee Management Relations - Personnel Analyst,4286,4286.pdf,E,1
+54,Executive Secretary - Employee Management Relations ,4287,4287.pdf,E,1
+54,Real Property and Site Analyst,4290,4290.pdf,R,11
+57,Utilization / Capacity Specialist,4292,TU/Utilization_Capacity_Specialist.pdf,U,1
+61,Geographic Information System (GIS) Analyst,4296,4296.pdf,G,5
+63,Geographic Information System (GIS) Senior Analyst,4297,4297.pdf,G,5
+61,Geographic Information System (GIS) Analyst - Facilities Asset Management,4298,4298,G,5
+63,Geographic Information System (GIS) Senior Analyst - Facilities Asset Management,4299,4299.pdf,G,5
+57,Demographic Specialist,4300,CD/Demographics_Specialist.pdf,D,11
+57,Facilities Operations Analyst,4402,EF/Facilities_Operations_Analyst.pdf,F,1
+54,Document Control Specialist,4404,4404.pdf,D,1
+60,Information and Records Manager,4405,GJ/Information_Records_Manager.pdf,I,11
+57,Public Records Office Document Control Specialist,4406,4406.pdf,P,1
+55,Telecommunications Specialist I,4791,TU/Telecommunications_Spec_I.pdf,T,2
+50,Vegas PBS - Master Control Specialist,4796,4796.pdf,V,2
+53,Vegas PBS - Office Manager,4799,4799.pdf,V,2
+54,TV Producer - Director I,4800,TU/TV_Producer_Director_I.pdf,T,2
+"",TV Engineer II,4810,"",T,2
+59,Telecommunications Specialist II,4811,TU/Telecommunications_Spec_II.pdf,T,2
+48,Vegas PBS - Donor Relations Specialist,4812,4812.pdf,V,2
+48,Vegas PBS - Development Department Assistant,4813,4813.pdf,V,2
+51,Vegas PBS - Office Supervisor,4814,4814.pdf,V,2
+"",Vegas PBS - Media Relations Specialist ,4815,"",V,2
+51,Vegas PBS - Fundraising/Event & Communication Assistant,4816,4816.pdf,V,2
+"",Vegas PBS - Communications Specialist,4817,"",V,2
+"",Vegas PBS - Assistant Accountant,4818,"",V,2
+"",Vegas PBS - Assistant to the General Manager,4819,"",V,2
+"",Vegas PBS - Volunteer Specialist,4820,"",V,2
+"",Vegas PBS - Membership Specialist,4821,"",V,2
+48,Vegas PBS - Membership Activities Specialist,4822,4822.pdf,V,2
+48,Vegas PBS - Sales Assistant,4823,VZ/VPBS_Sales_Assistant.pdf,V,2
+45,Vegas PBS - Receptionist ,4824,VZ/VPBS_Receptionist.pdf,V,2
+48,Vegas PBS - Workforce Training & Economic Development Assistant - Bilingual,4825,4825.pdf,V,2
+48,Vegas PBS - Administrative Office Assistant,4827,4827.pdf,V,2
+54,Vegas PBS - Executive Assistant,4828,4828.pdf,V,2
+"",Vegas PBS - Executive Assistant/Recruitment/EEO/Diversity and Compliance Supervisor,4829,"",V,2
+56,Senior TV Engineer,4830,QS/Senior_TV_Engineer.pdf,S,2
+65,Senior Telecommunications Specialist,4831,QS/Senior_Telecom_Specialist.pdf,S,2
+45,Vegas PBS - Workforce Training & Economic Development Receptionist/Customer Service Support-Bilingual,4832,"",V,2
+48,Vegas PBS - Programming and Traffic Assistant,4833,4833.pdf,V,2
+51,Vegas PBS - Office Supervisor-Content Department,4834,4834.pdf,V,2
+45,Vegas PBS - Educational Media Services - Library Office Specialist,4835,4835.pdf,V,2
+"",Vegas PBS - Database Services Specialist,4836,"",V,2
+"",Vegas PBS - Workforce Learning Management System Content Specialist,4838,"",V,2
+56,TV Datacast Engineer,4839,4839.pdf,T,2
+50,Vegas PBS - TV Assistant,4840,4840.pdf,V,2
+51,Vegas PBS - Intern (Steps B-E),4842,4842.pdf,V,2
+48,Vegas PBS - Workforce Training & Economic Development Assistant,4845,4845.pdf,V,2
+55,TV Producer - Director II,4850,TU/TV_Producer_Director_II.pdf,T,2
+54,TV Videographer/Editor,4860,4860.pdf,T,2
+59,TV Operations Manager,4870,TU/TV_Operations_Manager.pdf,T,2
+53,TV Digital Content Producer,4875,4875.pdf,T,2
+"",TV Member Services Manager,4880,"",T,2
+63,Vegas PBS - TV Executive Producer,4885,4885.pdf,"",2
+62,Vegas PBS - Senior Engineer,4886,4886.pdf,V,2
+61,Vegas PBS - TV Programming & Traffic Manager,4887,4887.pdf,V,2
+63,Vegas PBS - TV Multimedia Production Manager,4890,4890.pdf,V,2
+62,Vegas PBS - TV News Host/Anchor,4895,4895.pdf,V,2
+51,Vegas PBS - Ready To Learn Family Outreach Specialist,4900,4900.pdf,V,2
+41,Food Service Worker,5000,EF/Food_Service_Worker.pdf,F,4
+43,Food Service Specialist,5001,EF/Food_Service_Specialist.pdf,F,4
+43,Central Kitchen Food Service Specialist,5002,5002.pdf,C,4
+41,Central Kitchen Food Service Worker,5003,5003.pdf,C,4
+49,Elementary Food Service Manager,5004,5004.pdf,E,4
+51,Secondary Food Service Manager,5005,5005.pdf,S,4
+41,Food Service Worker Floater,5010,EF/Food_Service_Worker_Floater.pdf,F,4
+"",Baker,5020,AB/Baker.pdf,B,4
+50,Food Service Manager I,5110,EF/Food_Service_Manager_I.pdf,F,4
+54,Food Service Media Specialist,5111,5111.pdf,F,4
+50,Food Service Manager I Floater,5113,EF/Food_Service_Manager_I_Floater.pdf,F,4
+"",Food Service Facility Operations Supervisor,5115,"",F,4
+65,"Food Service Facilities, Equipment, and Maintenance Supervisor",5116,5116.pdf,F,4
+52,Food Service Software Support Technician,5117,5117.pdf,F,4
+51,Central Kitchen Food Service Manager,5121,5121.pdf,C,4
+55,Food Service Supervisor II,5260,EF/Food_Service_Supv_II.pdf,F,4
+64,Food Service System Administration Manager,5269,5269.pdf,F,4
+57,Food Service Region Supervisor,5270,EF/Food_Service_Region_Supervisor.pdf,F,4
+53,Food Service Personnel/Recruitment Specialist,5276,5276.pdf,F,4
+55,Food Service Purchasing Specialist,5277,5277.pdf,F,4
+58,Senior Food Service Supervisor,5280,QS/Senior_Food_Service_Supv.pdf,S,4
+57,Central Kitchen Food Service Supervisor,5281,5821.pdf,C,4
+55,Food Service Warehouse Supervisor,5300,EF/Food_Service_Warehouse_Supv.pdf,F,4
+60,Food Service Warehouse Operations Manager,5301,5301.pdf,F,4
+58,Food Service Maintenance Supervisor ,5305,EF/Food_Service_Maint_Supv.pdf,F,4
+57,Warehouse / Distribution Supervisor,5310,VZ/Warehouse_Distribution_Supv.pdf,W,4
+61,Plant Manager,5315,KP/Plant_Manager.pdf,P,4
+47,Vehicle Service Worker,6000,VZ/Vehicle_Service_Worker.pdf,V,10
+41,Bus Washer,6005,AB/Bus_Washer.pdf,B,10
+SW,Vehicle/Garage Attendant - Student Worker,6009,6009.pdf,V,10
+46,Vehicle / Garage Attendant ,6010,6010.pdf,V,10
+44,Small Vehicle Operator,6011,6011.pdf,S,10
+54,Vehicle Maintenance Technician II,6020,6020.pdf,V,10
+54-B,Temporary Vehicle Maintenance Technician,6021,6021.pdf,V,10
+53,Vehicle Body Repairer / Painter,6030,VZ/Vehicle_Body_Repairer_Painter.pdf,V,10
+54,Vehicle Radiator Repair Technician ,6040,VZ/Vehicle_Radiator_Repair_Tech.pdf,V,10
+51,Vehicle Maintenance Technician I,6060,6060.pdf,V,10
+58,Fleet Services Garage Shift Supervisor ,6070,6070.pdf,V,10
+53,Tire Inspector / Repairer ,6080,TU/Tire_Inspector_Repairer.pdf,T,10
+61,Fleet Maintenance Manager,6090,6090.pdf,F,10
+53,Bus Driver,6100,6100.pdf,B,10
+46,Bus Safety Inspector,6101,6101.pdf,B,10
+58,Vehicle Maintenance Technician III,6102,6102.pdf,V,10
+53-B,Bus Driver - Entry Level,6105,6105.pdf,B,10
+54,Special Education Bus Driver,6110,6110.pdf,S,10
+53-B,Temporary Driving Training Instructor,6131,6131.pdf,T,10
+56,Transportation Instructor,6132,6132.pdf,T,10
+56,Transportation Investigator,6150,6150.pdf,T,10
+56,Field Supervisor,6180,EF/Field_Supervisor.pdf,F,10
+47,Vehicle / Heavy Duty Equipment Parts Clerk,6300,VZ/Vehicle_Heavy_Duty_Parts_Clerk.pdf,V,10
+44,Vehicle Parts Expediter ,6305,VZ/Vehicle_Parts_Expediter.pdf ,V,10
+52,Senior Vehicle / Heavy Duty Equipment Parts Clerk,6310,QS/Sr_Vehicle_Heavy_Duty_Equip_Parts_Clerk.pdf,S,10
+58,Vehicle / Heavy Duty Equipment Parts Warehouse Supervisor,6325,6325.pdf,V,10
+57,Transportation Operations Supervisor,6330,TU/Transportation_Operations_Supv.pdf,T,10
+52,Transportation Routing & Scheduling Assistant,6335,TU/Transportation_Rout_Sched_Asst.pdf,T,10
+55,Transportation Routing & Scheduling Analyst,6340,TU/Transportation_Rout_Sched_Analyst.pdf,T,10
+58,Transportation Routing & Scheduling Supervisor ,6350,TU/Transportation_Rout_Sched_Supv.pdf,T,10
+55,Geographic Information System (GIS) Transportation Technician I,6351,6351.pdf,G,10
+58,Geographic Information System (GIS) Transportation Technician II,6352,6352.pdf,G,10
+58,Transportation Operations Manager,6400,TU/Transportation_Operations_Manager.pdf,T,10
+55,Support Professional Training Supervisor - Transportation,6410,6410.pdf,S,10
+54,Boiler Equipment Technician,7000,7000.pdf,B,11
+52,Boiler Equipment Technician - Entry-Level,7005,7005.pdf,B,11
+55,Electrician,7010,7010.pdf,E,11
+56,Infrared Thermographer (Electrical),7011,GJ/Infrared_Thermographer_Electrical.pdf,I,11
+SW,Electrician - Student Worker,7012,7012.pdf,E,11
+52,Electrician - Entry-Level,7015,7015.pdf,E,11
+SW,Plumber - Student Worker,7029,7029.pdf,P,11
+54,Plumber,7030,7030.pdf,P,11
+56,Fire Sprinkler Technician,7031,EF/Fire_Sprinkler_Technician.pdf,F,11
+56,Cross Connection System Control Specialist,7032,7032.pdf,C,11
+53,Fire Sprinkler Technician - Entry-Level,7033,7033.pdf,F,11
+52,Plumber - Entry-Level,7034,7034.pdf,P,11
+52,HVACR Technician - Entry-level,7035,7035.pdf,H,11
+SW,HVACR Technician - Student Worker,7039,7039.pdf,H,11
+54,HVACR Technician I,7040,7040.pdf,H,11
+55,Machinist Technician,7046,7046.pdf,M,11
+51,Machinist Technician Assistant,7047,7047.pdf,M,11
+"",Insulator,7050,GJ/Insulator.pdf,I,11
+52,Mobile Crane Operator I,7055,KP/Mobile_Crane_Operator_I.pdf,M,11
+55,Mobile Crane Operator II,7056,KP/Mobile_Crane_Operator_II.pdf,M,11
+52,Carpenter,7060,CD/Carpenter.pdf,C,11
+52,Locksmith,7070,KP/Locksmith.pdf,L,11
+52,Painter,7080,KP/Painter.pdf,P,11
+50,Grounds Equipment Technician,7090,GJ/Grounds_Equipment_Technician.pdf,G,9
+46,Assistant Grounds Equipment Technician,7091,7091.pdf,A,9
+54,Intrusion Alarm Technician,7100,7100.pdf,I,8
+58,Voice Communication Network Technician III ,7102,7102.pdf,V,5
+SW,Fire Alarm Technician - Student Worker,7104,7104.pdf,F,11
+55,Fire Alarm Technician,7105,7105.pdf,C,11
+53,Fire Alarm Technician - Entry-Level,7106,7106.pdf,C,11
+52,Audio Visual Technician,7115,AB/Audio_Visual_Technician.pdf,A,11
+SW,Building Engineer - Student Worker,7117,7117.pdf,B,11
+50,Building Engineer I,7119,7119.pdf,B,11
+52,Building Engineer II,7120,7120.pdf,B,11
+54,Building Engineer III,7122,7122.pdf,B,11
+53,Duplicating Equipment Technician,7131,CD/Duplicating_Equipment_Technician.pdf,D,11
+"",Pipefitter,7140,7140.pdf,P,11
+47,Pricing Clerk,7145,KP/Pricing_Clerk.pdf,P,1
+48,Construction Documents Clerk,7146,7146.pdf,C,1
+50,Construction Site Development Data Specialist,7147,7147.pdf,C,11
+48,Construction Compliance Clerk,7152,7152.pdf,C,1
+57,Construction Estimator,7153,7153.pdf,C,11
+59,Senior Project Scheduler,7154,QS/Senior_Project_Scheduler.pdf,S,11
+57,Project Scheduler,7155,KP/Project_Scheduler.pdf,P,11
+"",Industrial Arts Maintenance Technician,7160,GJ/Industrial_Arts_Maintenance_Technician.pdf,I,11
+50,Skilled Trades Assistant,7180,QS/Skilled_Trades_Assistant.pdf,S,11
+50,Trades Dispatcher / Scheduler,7181,TU/Trades_Dispatcher_Scheduler.pdf,T,11
+57,Facilities Dispatch and Helpdesk Manager,7182,7182.pdf,F,11
+SW,Utility Worker - Student Worker,7183,7183.pdf,U,11
+53,Work Management Help Desk Specialist,7184,7184.pdf,W,11
+45,Utility Worker I,7185,7185.pdf,U,9
+47,Utility Worker II,7186,7186.pdf,U,9
+48,Logistics Specialist I,7187,KP/Logistics_Specialist_I.pdf,L,9
+52,Logistics Specialist II,7188,"",L,9
+55,Logistics Specialist III,7189,"",L,9
+54,Radio Communications and Video Equipment Specialist,7192,7192.pdf,R,10
+56,Voice Communication Network Technician,7193,7193.pdf,V,5
+51,Communications Equipment Installer Assistant,7194,7194.pdf,C,5
+55,Communications Equipment Installer / Repairer,7195,7195.pdf,C,5
+55,Control Systems Technician,7200,7200.pdf,S,11
+45,Facilities Warehouse Utility Worker,7202,7202.pdf,F,9
+SW,Energy Management Specialist - Student Worker,7203,7203.pdf,E,11
+54,Energy Management Specialist,7204,7204.pdf,E,11
+56,Energy Management Technician I,7205,7205.pdf,E,11
+57,Energy Management Technician II,7206,EF/Energy_Management_Technician_II.pdf,E,11
+50,Energy Management Systems (EMS) Scheduler,7207,EF/Energy_Management_Systems_Scheduler.pdf,E,11
+58,Energy Management Supervisor,7208,EF/Energy_Management_Supervisor.pdf,E,11
+59,Commissioning Technician I,7209,7209.pdf,C,11
+52,Glazier,7210,7210.pdf,G,11
+62,Energy Management and Commissioning Supervisor,7211,EF/Energy_Management_Commissioning_Supervisor.pdf,E,11
+52,Roofer,7220,7220.pdf,R,11
+54,Water Treatment Technician,7230,7230.pdf,W,11
+52,Water Treatment Technician - Entry-Level,7235,7235.pdf,W,11
+54,Musical Instrument Technician,7240,KP/Musical_Instrument_Technician.pdf,M,11
+SW,Welder - Student Worker,7249,7249.pdf,W,11
+55,Welder,7250,VZ/Welder.pdf,W,11
+52,Welder - Entry Level,7251,7251.pdf,W,11
+55,Fire Equipment Technician,7260,EF/Fire_Equipment_Technician.pdf,F,11
+"",Furniture Repair Technician,7270,"",F,11
+54,Food Service Equipment Technician,7275,EF/Food_Service_Equip_Tech.pdf,F,4
+50,Food Service Maintenance Technician I,7276,7276.pdf,F,4
+"",Food Service Maintenance Technician II,7277,"",F,4
+52,Flooring Technician,7280,7280.pdf,F,11
+57,Maintenance Leader,7300,7300.pdf,M,11
+"",Facility QA/QC Construction Inspector/Manager,7308,"",F,11
+58,Civil & Landscape Q/A Construction Inspector / Manager,7309,7309.pdf,C,9
+53,Mason,7310,7310.pdf,M,11
+"",Maintenance Leader - Carpenter,7315,KP/Maintenance_Leader-Carpenter.pdf,M,11
+"",Maintenance Leader - Electrical,7316,KP/Maintenance_Leader-Electrical.pdf,M,11
+"",Maintenance Leader - Electronics Equipment and Systems,7317,KP/Maintenance_Leader-Electronics_Equipment_and_Systems.pdf,M,11
+"",Maintenance Leader - Flooring,7319,KP/Maintenance_Leader-Flooring.pdf,M,11
+"",Maintenance Leader - Glazier,7320,KP/Maintenance_Leader-Glazier.pdf,M,11
+"",Maintenance Leader - HVACR,7321,KP/Maintenance_Leader-HVACR.pdf,M,11
+"",Maintenance Leader - Hardware/Locksmith,7322,KP/Maintenance_Leader-Hardware-Locksmith.pdf,M,11
+"",Maintenance Leader - Painter,7323,KP/Maintenance_Leader-Painter.pdf,M,11
+"",Maintenance Leader - Plumber,7324,KP/Maintenance_Leader-Plumber.pdf,M,11
+"",Maintenance Leader - Office Machine Repair,7325,KP/Maintenance_Leader-Office_Machine_Repair.pdf,M,11
+"",Maintenance Leader - Roofer,7326,7326.pdf,M,11
+"",Maintenance Leader - Fire Sprinkler Systems,7327,KP/Maintenance_Leader-Fire_Sprinkler_Systems.pdf,M,11
+51,Fire Equipment Technician Assistant,7329,7329.pdf,F,11
+53,Electronics Technician II,7390,EF/Electronics_Technician_II.pdf,E,11
+56,HVACR Technician II,7400,7400.pdf,H,11
+56,Chiller Technician I,7401,7401.pdf,C,11
+57,Chiller Technician II,7402,7402.pdf,C,11
+"","Asphalt, Concrete, and Masonry Supervisor",7410,"",A,11
+58,Building Engineer Supervisor,7550,AB/Building_Engineer_Supervisor.pdf,B,11
+"",Furniture Repairer Supervisor,7565,"",F,11
+58,Electrician Supervisor,7570,EF/Electrician_Supervisor.pdf,E,11
+58,Electronics Supervisor,7575,EF/Electronics_Supervisor.pdf,E,11
+58,Painter Supervisor,7580,KP/Painter_Supervisor.pdf,P,11
+58,Carpet and Flooring Supervisor,7585,7585.pdf,C,11
+58,Hardware / Locksmith Supervisor,7590,GJ/Hardware_Locksmith_Supervisor.pdf,H,11
+"",Plumber / Pipefitter / Boiler Technician Supervisor,7620,KP/Plumber_Pipefitter_Boiler_Technician_Supervisor.pdf,P,11
+"",Industrial Arts Maintenance Supervisor,7635,GJ/Industrial_Arts_Maintenance_Supervisor.pdf,I,11
+58,Maintenance Supervisor,7645,7645.pdf,M,11
+"",Facility Service Representative ,7650,"",F,11
+59,Facility Damage Claims Inspector,7660,7660.pdf,"",3
+59,Code Compliance Inspector / Site Manager,7700,7700.pdf,C,11
+62,Building Inspector-Site Manager,7701,7701.pdf,B,11
+58,Warranty Program Specialist,7703,VZ/Warranty_Program_Specialist.pdf,W,11
+60,Warranty Program Supervisor,7704,VZ/Warranty_Program_Supervisor.pdf,W,11
+"",Asbestos Inspector,7705,"",A,11
+62,Construction Plans Examiner,7707,7707.pdf,C,11
+58,Preventive Maintenance Manager,7709,KP/Preventive_Maintenance_Manager.pdf,P,11
+60,Senior Code Compliance Inspector / Site Manager,7710,QS/Senior_Code_Compliance_Inspector_Site_Manager.pdf,S,11
+57,Program Development Specialist,7711,KP/Program_Development_Specialist.pdf,P,3
+58,Purchasing Analyst / Contract Specialist,7712,KP/Purchasing_Analyst_Contract_Specialist.pdf,P,3
+58,Construction Analyst/Contract Specialist,7714,7714.pdf,C,3
+58,Drafting and Records Manager,7719,CD/Drafting_Records_Manager.pdf,D,11
+55,Drafter,7720,CD/Drafter.pdf,D,11
+SW,Drafter - Student Worker,7721,7721.pdf,D,11
+"",Apprentice Drafter,7725,7725.pdf,A,11
+55,CADD Technician I,7727,CD/CADD_Technician_I.pdf,C,11
+57,CADD Technician II,7728,CD/CADD_Technician_II.pdf,C,11
+59,CADD Technician III,7729,CD/CADD_Technician_III.pdf,C,11
+"",Asbestos Abatement Worker / Insulator,7730,"",A,11
+"",Asbestos Planner / Scheduler,7735,"",A,11
+57,Senior Asbestos Abatement Inspector,7750,QS/Senior_Asbestos_Abatement_Inspector.pdf,S,11
+54,Risk Assessor,7760,7760.pdf,R,3
+"",AHERA Compliance Monitor,7780,"",A,11
+58,Landscaping and Grounds Equipment Operator Supervisor,8005,8005.pdf,G,9
+"",Landscaping and Grounds Equipment Repair Supervisor,8010,8010.pdf,G,9
+53,Recycling Specialist,8020,QS/Recycling_Specialist.pdf,R,3
+"",Support Staff Training Supervisor - Operations Department,8025,QS/Support_Staff_Training_Supervisor_Operations_Department.pdf,S,9
+60,Facilities Services Training Supervisor,8026,8026.pdf,F,9
+55,Facilities Services Trainer,8027,8027.pdf,F,9
+50,Carpet Cleaning Technician,8030,8030.pdf,C,11
+51,Support Professional Trainer - Operations Department,8035,8035.pdf,S,9
+43,Central Kitchen Steward,8039,CD/Central_Kitchen_Steward.pdf,C,4
+46,Custodian,8040,CD/Custodian.pdf,C,9
+46-B,Temporary Custodian,8041,8041.pdf,T,9
+SW,Custodian - Student Worker,8042,8042,C,9
+48,Custodial Leader,8100,8100.pdf,T,9
+"",Pest Control Supervisor,8101,KP/Pest_Control_Supervisor.pdf,P,9
+56,Senior Integrated Pest Management Technician,8102,8102.pdf,S,9
+52,Integrated Pest  Management Technician II,8103,8103.pdf,I,11
+60,Manager - Integrated Pest Management,8104,8104.pdf,M,11
+49,Head Custodian I,8110,GJ/Head_Custodian_I.pdf,H,9
+49,Special School Head Custodian,8115,QS/Special_School_Head_Custodian.pdf,S,9
+"",Operations Supervisor - Floor Care,8116,8116.pdf,O,9
+48,Floor Care Technician,8117,8117.pdf,F,9
+50,Senior Floor Care Technician,8118,QS/Senior_Floor_Care_Technician.pdf,S,9
+"",Floor Care Supervisor,8119,"",F,9
+51,Head Custodian II,8120,GJ/Head_Custodian_II.pdf,H,9
+54,Head Custodian III,8130,GJ/Head_Custodian_III.pdf,H,9
+57,Custodial Supervisor,8160,CD/Custodial_Supervisor.pdf,C,9
+60,Operations Manager,8165,8000/8165.pdf,O,11
+57,Building Manager,8166,8166.pdf,B,9
+56,Assistant Custodial Supervisor,8170,8170.pdf,A,9
+44,Gardener I,8190,GJ/Gardener_I.pdf,G,9
+46,Gardener II,8200,GJ/Gardener_II.pdf,G,9
+54,Gardener III,8201,8201.pdf,G,9
+58,Landscape and Grounds Supervisor,8220,KP/Landscape_Grounds_Supervisor.pdf,L,9
+48,Landscape Leader,8230,KP/Landscape_Leader.pdf,L,9
+52,Landscape Technician,8235,KP/Landscape_Technician.pdf,L,9
+50,Irrigation Systems Installer/ Repairer,8240,GJ/Irrigation_Systems_Installer_Repairer.pdf,I,9
+54,Irrigation Control Technician I,8245,8245.pdf,S,9
+57,Irrigation Control Manager,8246,8246.pdf,W,9
+62,Irrigation Control and Landscape Project Supervisor,8250,8250.pdf,S,9
+52,Farm / Nursery Manager,8260,EF/Farm_Nursery_Manager.pdf,F,9
+53,Equipment Operator/Truck Driver,8300,8300.pdf,E,9
+49,Equipment Operator/Truck Driver Assistant,8305,8305.pdf,E,9
+55,Equipment Operator Crew Leader,8315,8315.pdf,E,9
+41-D,Temporary Food Service Worker,9000,9000.pdf,T,4
+SW,Food Service Student Worker,9031,9031.pdf,F,6
+SW,Student Worker I,9040,9040.pdf,S,6
+44,Support Professional Intern (Steps B-E),9080,9080.pdf,S,6
+SW,Gardener - Student Worker,9700,9700.pdf,G,9
+AT4,"Paraprofessional: Secondary Music, Dance, Theatre Program",9900,9900.pdf,P,7
+AT1,Paraprofessional: AVID Tutor I,9961,9961.pdf,P,7
+AT2,Paraprofessional: AVID Tutor II,9962,9962.pdf,P,7
+AT3,Paraprofessional: AVID Tutor III,9963,9963.pdf,P,7
+AT4,Paraprofessional: AVID Tutor IV,9964,9964.pdf,P,7
+48,Paraprofessional: Instructional Technology Lab Aide,9968,9968.pdf,P,7
+AT1,Paraprofessional: Tutor I,9972,9972.pdf,P,7
+AT2,Paraprofessional: Tutor II,9973,9973.pdf,P,7
+AT3,Paraprofessional: Tutor III,9974,9974.pdf,P,7
+AT4,Paraprofessional: Tutor IV,9975,9975.pdf,P,7
+AT3,Temporary Vegas PBS Event & Services Specialist,9985,9985.pdf,T,7
