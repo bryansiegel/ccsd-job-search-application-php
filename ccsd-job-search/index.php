@@ -1,22 +1,14 @@
 <?php
-// Database connection configuration
-$host = 'localhost';
-$dbname = 'ccsd_jobs_php';
-$username = 'root'; // Adjust as needed
-$password = 'advanced'; // Adjust as needed
+// Include MySQL connection and model
+require_once 'includes/db/mysql-connect.php';
+require_once 'includes/db/model.php';
 
 try {
-    // Create PDO connection
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Create model instance
+    $jobModel = new JobModel($pdo);
     
-    // Query to get all records from administration_jobs table
-    $sql = "SELECT * FROM administration_jobs";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    
-    // Fetch all results
-    $administration_jobs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Get all administration jobs using the model
+    $administration_jobs = $jobModel->getAdminJobs();
     
     echo "<h1>CCSD Administration Jobs</h1>";
     echo "<div class='jobs-container'>";
@@ -38,8 +30,8 @@ try {
     echo "</div>";
     echo "<p>Total Administration Jobs: " . count($administration_jobs) . "</p>";
     
-} catch (PDOException $e) {
-    echo "Database Error: " . $e->getMessage();
+} catch (Exception $e) {
+    echo "Error: " . $e->getMessage();
 }
 ?>
 
