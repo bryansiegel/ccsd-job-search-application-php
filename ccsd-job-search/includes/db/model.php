@@ -476,7 +476,7 @@ class JobModel {
                 ':category' => $data['category'],
                 ':division' => $data['division'],
                 ':certification_type' => $data['certification_type'],
-                ':active' => $data['active'] ?? 'Y',
+                ':active' => $data['active'] ?? 1,
                 ':salary_code' => $data['salary_code'] ?? null,
                 ':filename' => $data['filename'] ?? null
             ]);
@@ -509,7 +509,7 @@ class JobModel {
                 ':category' => $data['category'],
                 ':division' => $data['division'],
                 ':certification_type' => $data['certification_type'],
-                ':active' => $data['active'] ?? 'Y',
+                ':active' => $data['active'] ?? 1,
                 ':salary_code' => $data['salary_code'] ?? null,
                 ':filename' => $data['filename'] ?? null
             ]);
