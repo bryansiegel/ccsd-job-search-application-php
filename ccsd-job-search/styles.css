@@ -520,7 +520,7 @@ h1 {
 
 .job-item h3 {
     color: #2c3e50;
-    margin-top: 0;
+    margin-top: 25px;
     margin-bottom: 15px;
     font-size: 1.2em;
     line-height: 1.3;
@@ -547,6 +547,7 @@ h1 {
 /* Different colors for each job type */
 .admin-job {
     border-left-color: #e74c3c;
+    padding-top:20px;
 }
 
 .admin-job .job-type {

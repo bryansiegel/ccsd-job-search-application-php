@@ -84,7 +84,7 @@ try {
             
             <div class="nav-menu">
                 <ul class="nav-utility">
-                    <li><a href="#" class="utility-link">Login</a></li>
+                    <li><a href="admin/index.php" class="utility-link">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -233,7 +233,12 @@ try {
                         <p><strong>Division:</strong> <?php echo htmlspecialchars($job['division']); ?></p>
                         <p><strong>Description:</strong> <?php echo htmlspecialchars($job['description']); ?></p>
                         <?php if (!empty($job['filename'])): ?>
-                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                            <p><strong>File:</strong> 
+                                <a href="files/administration/<?php echo htmlspecialchars($job['filename']); ?>" 
+                                   target="_blank" style="color: #3498db; text-decoration: underline;">
+                                    <?php echo htmlspecialchars($job['filename']); ?>
+                                </a>
+                            </p>
                         <?php endif; ?>
                         <span class='job-type'>Administration</span>
                     </div>
@@ -254,7 +259,12 @@ try {
                         <p><strong>Division:</strong> <?php echo htmlspecialchars($job['division']); ?></p>
                         <p><strong>Certification:</strong> <?php echo htmlspecialchars($job['certification_type']); ?></p>
                         <?php if (!empty($job['filename'])): ?>
-                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                            <p><strong>File:</strong> 
+                                <a href="files/licensed/<?php echo htmlspecialchars($job['filename']); ?>" 
+                                   target="_blank" style="color: #3498db; text-decoration: underline;">
+                                    <?php echo htmlspecialchars($job['filename']); ?>
+                                </a>
+                            </p>
                         <?php endif; ?>
                         <?php if (!empty($job['salary_code'])): ?>
                             <p><strong>Salary Code:</strong> <?php echo htmlspecialchars($job['salary_code']); ?></p>
@@ -284,7 +294,12 @@ try {
                             <p><strong>Union Code:</strong> <?php echo htmlspecialchars($job['union_code']); ?></p>
                         <?php endif; ?>
                         <?php if (!empty($job['filename'])): ?>
-                            <p><strong>Filename:</strong> <?php echo htmlspecialchars($job['filename']); ?></p>
+                            <p><strong>File:</strong> 
+                                <a href="files/support/<?php echo htmlspecialchars($job['filename']); ?>" 
+                                   target="_blank" style="color: #3498db; text-decoration: underline;">
+                                    <?php echo htmlspecialchars($job['filename']); ?>
+                                </a>
+                            </p>
                         <?php endif; ?>
                         <span class='job-type'>Support</span>
                     </div>

@@ -387,6 +387,220 @@ class JobModel {
             throw new Exception("Error getting filter options: " . $e->getMessage());
         }
     }
+    
+    // ==================== CRUD OPERATIONS ====================
+    
+    /**
+     * Create a new administration job
+     * @param array $data Job data
+     * @return int|false Job ID if successful, false otherwise
+     */
+    public function createAdminJob($data) {
+        try {
+            $sql = "INSERT INTO administration_jobs (title, grade, ccode, division, description, filename) 
+                    VALUES (:title, :grade, :ccode, :division, :description, :filename)";
+            $stmt = $this->pdo->prepare($sql);
+            
+            $result = $stmt->execute([
+                ':title' => $data['title'],
+                ':grade' => $data['grade'],
+                ':ccode' => $data['ccode'],
+                ':division' => $data['division'],
+                ':description' => $data['description'],
+                ':filename' => $data['filename'] ?? null
+            ]);
+            
+            return $result ? $this->pdo->lastInsertId() : false;
+        } catch (PDOException $e) {
+            throw new Exception("Error creating administration job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Update an administration job
+     * @param int $id Job ID
+     * @param array $data Job data
+     * @return bool Success status
+     */
+    public function updateAdminJob($id, $data) {
+        try {
+            $sql = "UPDATE administration_jobs 
+                    SET title = :title, grade = :grade, ccode = :ccode, 
+                        division = :division, description = :description, filename = :filename 
+                    WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            
+            return $stmt->execute([
+                ':id' => $id,
+                ':title' => $data['title'],
+                ':grade' => $data['grade'],
+                ':ccode' => $data['ccode'],
+                ':division' => $data['division'],
+                ':description' => $data['description'],
+                ':filename' => $data['filename'] ?? null
+            ]);
+        } catch (PDOException $e) {
+            throw new Exception("Error updating administration job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Delete an administration job
+     * @param int $id Job ID
+     * @return bool Success status
+     */
+    public function deleteAdminJob($id) {
+        try {
+            $sql = "DELETE FROM administration_jobs WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            return $stmt->execute([':id' => $id]);
+        } catch (PDOException $e) {
+            throw new Exception("Error deleting administration job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Create a new licensed job
+     * @param array $data Job data
+     * @return int|false Job ID if successful, false otherwise
+     */
+    public function createLicensedJob($data) {
+        try {
+            $sql = "INSERT INTO licensed_jobs (title, job_id, category, division, certification_type, active, salary_code, filename) 
+                    VALUES (:title, :job_id, :category, :division, :certification_type, :active, :salary_code, :filename)";
+            $stmt = $this->pdo->prepare($sql);
+            
+            $result = $stmt->execute([
+                ':title' => $data['title'],
+                ':job_id' => $data['job_id'],
+                ':category' => $data['category'],
+                ':division' => $data['division'],
+                ':certification_type' => $data['certification_type'],
+                ':active' => $data['active'] ?? 'Y',
+                ':salary_code' => $data['salary_code'] ?? null,
+                ':filename' => $data['filename'] ?? null
+            ]);
+            
+            return $result ? $this->pdo->lastInsertId() : false;
+        } catch (PDOException $e) {
+            throw new Exception("Error creating licensed job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Update a licensed job
+     * @param int $id Job ID
+     * @param array $data Job data
+     * @return bool Success status
+     */
+    public function updateLicensedJob($id, $data) {
+        try {
+            $sql = "UPDATE licensed_jobs 
+                    SET title = :title, job_id = :job_id, category = :category, 
+                        division = :division, certification_type = :certification_type, 
+                        active = :active, salary_code = :salary_code, filename = :filename 
+                    WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            
+            return $stmt->execute([
+                ':id' => $id,
+                ':title' => $data['title'],
+                ':job_id' => $data['job_id'],
+                ':category' => $data['category'],
+                ':division' => $data['division'],
+                ':certification_type' => $data['certification_type'],
+                ':active' => $data['active'] ?? 'Y',
+                ':salary_code' => $data['salary_code'] ?? null,
+                ':filename' => $data['filename'] ?? null
+            ]);
+        } catch (PDOException $e) {
+            throw new Exception("Error updating licensed job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Delete a licensed job
+     * @param int $id Job ID
+     * @return bool Success status
+     */
+    public function deleteLicensedJob($id) {
+        try {
+            $sql = "DELETE FROM licensed_jobs WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            return $stmt->execute([':id' => $id]);
+        } catch (PDOException $e) {
+            throw new Exception("Error deleting licensed job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Create a new support job
+     * @param array $data Job data
+     * @return int|false Job ID if successful, false otherwise
+     */
+    public function createSupportJob($data) {
+        try {
+            $sql = "INSERT INTO support_jobs (title, grade, job_code, department_code, union_code, filename) 
+                    VALUES (:title, :grade, :job_code, :department_code, :union_code, :filename)";
+            $stmt = $this->pdo->prepare($sql);
+            
+            $result = $stmt->execute([
+                ':title' => $data['title'],
+                ':grade' => $data['grade'] ?? null,
+                ':job_code' => $data['job_code'] ?? null,
+                ':department_code' => $data['department_code'] ?? null,
+                ':union_code' => $data['union_code'] ?? null,
+                ':filename' => $data['filename'] ?? null
+            ]);
+            
+            return $result ? $this->pdo->lastInsertId() : false;
+        } catch (PDOException $e) {
+            throw new Exception("Error creating support job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Update a support job
+     * @param int $id Job ID
+     * @param array $data Job data
+     * @return bool Success status
+     */
+    public function updateSupportJob($id, $data) {
+        try {
+            $sql = "UPDATE support_jobs 
+                    SET title = :title, grade = :grade, job_code = :job_code, 
+                        department_code = :department_code, union_code = :union_code, filename = :filename 
+                    WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            
+            return $stmt->execute([
+                ':id' => $id,
+                ':title' => $data['title'],
+                ':grade' => $data['grade'] ?? null,
+                ':job_code' => $data['job_code'] ?? null,
+                ':department_code' => $data['department_code'] ?? null,
+                ':union_code' => $data['union_code'] ?? null,
+                ':filename' => $data['filename'] ?? null
+            ]);
+        } catch (PDOException $e) {
+            throw new Exception("Error updating support job: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Delete a support job
+     * @param int $id Job ID
+     * @return bool Success status
+     */
+    public function deleteSupportJob($id) {
+        try {
+            $sql = "DELETE FROM support_jobs WHERE id = :id";
+            $stmt = $this->pdo->prepare($sql);
+            return $stmt->execute([':id' => $id]);
+        } catch (PDOException $e) {
+            throw new Exception("Error deleting support job: " . $e->getMessage());
+        }
+    }
 }
 
 ?>
