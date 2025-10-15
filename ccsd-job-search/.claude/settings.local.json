@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php:*)",
+      "Bash(grep:*)",
+      "WebFetch(domain:ccsdnet-22-us-west1-01.preview.finalsitecdn.com)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(sudo chown:*)"
+    ],
+    "deny": []
+  }
+}
