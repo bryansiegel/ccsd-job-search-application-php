@@ -7,7 +7,8 @@
       "Bash(mkdir:*)",
       "Bash(ls:*)",
       "Bash(chmod:*)",
-      "Bash(sudo chown:*)"
+      "Bash(sudo chown:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
