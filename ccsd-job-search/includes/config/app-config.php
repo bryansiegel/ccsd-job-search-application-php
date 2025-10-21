@@ -29,7 +29,7 @@ define('SUPPORT_FILES_PATH', FILES_PATH . 'support/');
 // Default navigation configuration
 $default_nav_config = [
     'logo_path' => 'img/ccsd-main-logo-white.png',
-    'logo_alt' => 'CCSD Logo',
+    'logo_alt' => 'CCSD',
     'base_path' => ''
 ];
 

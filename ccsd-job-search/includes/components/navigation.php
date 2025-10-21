@@ -13,7 +13,7 @@
 // Set default configuration
 $default_config = [
     'logo_path' => 'img/ccsd-main-logo-white.png',
-    'logo_alt' => 'CCSD Logo',
+    'logo_alt' => 'CCSD Job Application',
     'links' => [],
     'base_path' => ''
 ];

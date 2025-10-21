@@ -2,6 +2,8 @@
 
 A PHP-based job search and management portal for CCSD (Clark County School District) with CRUD functionality for job postings.
 
+### Main application is located within the ccsd-job-search folder
+
 ## System Requirements
 
 - **PHP**: 7.4 or higher
