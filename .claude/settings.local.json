@@ -9,7 +9,11 @@
       "Bash(php:*)",
       "Bash(mysql:*)",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(chmod:*)",
+      "Bash(composer install:*)",
+      "Bash(./composer install --no-interaction)",
+      "Bash(./vendor/bin/phpunit:*)"
     ],
     "deny": []
   }
