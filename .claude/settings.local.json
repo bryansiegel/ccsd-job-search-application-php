@@ -5,7 +5,11 @@
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(php:*)",
+      "Bash(mysql:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }
