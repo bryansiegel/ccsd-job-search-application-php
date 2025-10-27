@@ -77,10 +77,11 @@ ccsd-job-search/
 │               └── support-staff/    # Support job files
 ├── img/
 ├── includes/
+├── job-creation-sop.php
 └── styles.css
 ```
 
-**Note**: The file storage has been updated from the legacy `files/` structure to the new `employees/resources/pdf/desc/` structure for better organization.
+**Note**: The file storage uses the organized `employees/resources/pdf/desc/` structure with separate subdirectories for each job type (ap/, lp/, support-staff/).
 
 ### 5. File Permissions
 
