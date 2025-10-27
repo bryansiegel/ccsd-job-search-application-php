@@ -177,6 +177,11 @@ The application accepts:
 - **URL**: `http://yourserver/ccsd-job-search/admin/`
 - **Features**: Create, edit, delete jobs, file management
 
+### Job Creation Guide
+- **URL**: `http://yourserver/ccsd-job-search/job-creation-sop.php`
+- **Features**: Step-by-step Standard Operating Procedure for creating jobs
+- **Access**: Available from both public and admin interfaces via navigation links
+
 ## Troubleshooting
 
 ### File Upload Issues
@@ -212,6 +217,7 @@ chown -R www-data:www-data /path/to/ccsd-job-search/employees/
 - **Responsive Design**: Mobile-friendly interface
 - **Tabbed Interface**: Organized job type display
 - **Admin Panel**: Complete job management system
+- **User Documentation**: Built-in Standard Operating Procedure (SOP) for job creation
 - **Comprehensive Testing**: PHPUnit test suite with 90+ tests
 - **Quality Assurance**: Automated testing for all functionality
 
@@ -283,6 +289,10 @@ The technical documentation includes:
 - API endpoints and functionality
 - Development workflows
 - Comprehensive testing procedures
+- User guides and standard operating procedures
+
+### User Documentation
+- **Job Creation SOP**: [job-creation-sop.php](job-creation-sop.php) - Step-by-step guide for creating jobs in the admin interface
 
 ## Testing
 

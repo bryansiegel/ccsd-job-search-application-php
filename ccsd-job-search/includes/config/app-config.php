@@ -35,11 +35,13 @@ $default_nav_config = [
 
 // Admin navigation links
 $admin_nav_links = [
+    ['url' => '../job-creation-sop.php', 'text' => 'How to Create Jobs', 'class' => 'utility-link'],
     ['url' => '../index.php', 'text' => '← Job Search', 'class' => 'utility-link']
 ];
 
 // Public navigation links
 $public_nav_links = [
+    ['url' => 'job-creation-sop.php', 'text' => 'How to Create Jobs', 'class' => 'utility-link'],
     ['url' => 'admin/index.php', 'text' => 'Login', 'class' => 'utility-link']
 ];
 

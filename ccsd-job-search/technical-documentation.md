@@ -24,6 +24,7 @@ The CCSD Job Search Portal is a PHP-based web application designed for Clark Cou
 ```
 ccsd-job-search/
 ├── index.php                 # Main application entry point
+├── job-creation-sop.php      # Job creation Standard Operating Procedure
 ├── admin/                    # Administrative interface
 │   └── index.php            # Admin panel entry point
 ├── includes/                 # Core application logic
@@ -287,6 +288,17 @@ Application navigation with:
 - Logo display
 - Configurable links
 - Admin/public mode support
+
+### 5. User Documentation (`job-creation-sop.php`)
+
+#### Standard Operating Procedure
+Comprehensive user guide providing:
+- Step-by-step job creation process
+- Job type specific field requirements
+- File upload guidelines and validation rules
+- Troubleshooting common issues
+- Visual indicators for required fields
+- Navigation integration with both public and admin interfaces
 
 ## Security Features
 
@@ -701,6 +713,51 @@ $_ENV['APP_ENV'] = 'testing';
 $_ENV['DB_NAME'] = 'ccsd_jobs_test';
 ```
 
+## User Guide
+
+### Job Creation Standard Operating Procedure
+
+The application includes a built-in user guide accessible at `job-creation-sop.php` that provides:
+
+#### Access Points
+- **Public Interface**: "How to Create Jobs" link in main navigation (left of Login)
+- **Admin Interface**: "How to Create Jobs" link in admin navigation (left of Job Search)
+- **Direct URL**: `/job-creation-sop.php`
+
+#### SOP Content Structure
+1. **Access Requirements**: Administrative interface navigation
+2. **Job Type Selection**: Administration, Licensed, Support position types
+3. **Field Requirements**: Job type specific required and optional fields
+4. **File Upload Process**: Document upload guidelines and validation
+5. **Review and Submission**: Final validation and submission steps
+6. **Verification Process**: Confirming successful job creation
+7. **Troubleshooting Guide**: Common issues and solutions
+
+#### Field Requirements by Job Type
+
+**Administration Jobs:**
+- Required: Job Title
+- Optional: Grade, Classification Code (CCODE), Division, Description
+
+**Licensed Jobs:**
+- Required: Job Title
+- Optional: Job ID, Category, Division, Certification Type, Salary Code, Active Status
+
+**Support Jobs:**
+- Required: Job Title
+- Optional: Grade, Job Code, Department Code, Union Code
+
+#### File Upload Guidelines
+- **Accepted Formats**: PDF, DOC, DOCX
+- **Maximum Size**: 10MB
+- **Automatic Naming**: Files renamed based on job codes
+- **Storage Locations**: Organized by job type in `employees/resources/pdf/desc/`
+
+#### Troubleshooting Coverage
+- File upload errors (size, format, connection issues)
+- Form validation errors (required fields, special characters)
+- Database errors (duplicates, connectivity, permissions)
+
 ## Maintenance
 
 ### Regular Tasks
@@ -711,6 +768,7 @@ $_ENV['DB_NAME'] = 'ccsd_jobs_test';
 - Log file rotation and cleanup
 - **Test Suite Maintenance**: Keep tests updated with code changes
 - **Coverage Monitoring**: Maintain high test coverage standards
+- **User Documentation Updates**: Keep SOP current with interface changes
 
 ### Monitoring
 - Database connection health
