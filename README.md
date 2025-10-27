@@ -280,7 +280,7 @@ composer dump-autoload --optimize
 
 ## Documentation
 
-For detailed technical information, system architecture, and development guidelines, see the [Technical Documentation](technical-documentation.md).
+For detailed technical information, system architecture, and development guidelines, see the [Technical Documentation](ccsd-job-search/technical-documentation.md).
 
 The technical documentation includes:
 - Detailed system architecture
@@ -293,7 +293,7 @@ The technical documentation includes:
 - User guides and standard operating procedures
 
 ### User Documentation
-- **Job Creation SOP**: [job-creation-sop.php](job-creation-sop.php) - Step-by-step guide for creating jobs in the admin interface
+- **Job Creation SOP**: [job-creation-sop.php](ccsd-job-search/job-creation-sop.php) - Step-by-step guide for creating jobs in the admin interface
 
 ## Testing
 
