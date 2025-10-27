@@ -64,7 +64,16 @@ $job_type_display = ucfirst($job_type);
     
     <?php if (!empty($job['filename'])): ?>
         <p><strong>File:</strong> 
-            <a href="<?php echo htmlspecialchars($card_config['base_path'] . 'files/' . $job_type . '/' . $job['filename']); ?>" 
+            <?php 
+            // Generate new file path based on job type
+            $file_path = match($job_type) {
+                'administration' => $card_config['base_path'] . 'employees/resources/pdf/desc/ap/' . $job['filename'],
+                'licensed' => $card_config['base_path'] . 'employees/resources/pdf/desc/lp/' . $job['filename'],
+                'support' => $card_config['base_path'] . 'employees/resources/pdf/desc/support-staff/' . $job['filename'],
+                default => $card_config['base_path'] . 'files/' . $job_type . '/' . $job['filename']
+            };
+            ?>
+            <a href="<?php echo htmlspecialchars($file_path); ?>" 
                target="_blank" style="color: #3498db; text-decoration: underline;">
                 <?php echo htmlspecialchars($job['filename']); ?>
             </a>

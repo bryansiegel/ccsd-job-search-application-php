@@ -91,15 +91,15 @@ function handleFileUpload($jobType, $jobData = []) {
  * @throws Exception If invalid job type
  */
 function getUploadDirectory($jobType) {
-    $baseDir = dirname(dirname(__DIR__)) . '/files/';
+    $baseDir = dirname(dirname(__DIR__)) . '/employees/resources/pdf/desc/';
     
     switch ($jobType) {
         case 'administration':
-            return $baseDir . 'administration/';
+            return $baseDir . 'ap/';
         case 'licensed':
-            return $baseDir . 'licensed/';
+            return $baseDir . 'lp/';
         case 'support':
-            return $baseDir . 'support/';
+            return $baseDir . 'support-staff/';
         default:
             throw new Exception("Invalid job type for file upload: " . $jobType);
     }

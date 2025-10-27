@@ -22,9 +22,9 @@ define('JOB_TYPES', ['administration', 'licensed', 'support']);
 // Paths
 define('BASE_PATH', dirname(dirname(__DIR__)) . '/');
 define('FILES_PATH', BASE_PATH . 'files/');
-define('ADMIN_FILES_PATH', FILES_PATH . 'administration/');
-define('LICENSED_FILES_PATH', FILES_PATH . 'licensed/');
-define('SUPPORT_FILES_PATH', FILES_PATH . 'support/');
+define('ADMIN_FILES_PATH', BASE_PATH . 'employees/resources/pdf/desc/ap/');
+define('LICENSED_FILES_PATH', BASE_PATH . 'employees/resources/pdf/desc/lp/');
+define('SUPPORT_FILES_PATH', BASE_PATH . 'employees/resources/pdf/desc/support-staff/');
 
 // Default navigation configuration
 $default_nav_config = [
