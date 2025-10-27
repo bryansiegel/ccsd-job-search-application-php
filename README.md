@@ -330,5 +330,3 @@ composer install
 - PHPUnit 9.6+
 - Test database: `ccsd_jobs_test`
 - PHP 7.4+ with required extensions
-
-See [tests/README.md](tests/README.md) for detailed testing documentation.
