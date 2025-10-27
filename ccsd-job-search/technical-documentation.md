@@ -40,13 +40,48 @@ ccsd-job-search/
 │   └── functions/           # Business logic functions
 │       ├── file-upload.php  # File upload handling
 │       └── job-processing.php # Job data processing
-├── files/                   # File upload storage
-│   ├── administration/      # Admin job files
-│   ├── licensed/           # Licensed job files
-│   └── support/            # Support job files
+├── employees/              # File upload storage (updated structure)
+│   └── resources/
+│       └── pdf/
+│           └── desc/
+│               ├── ap/               # Administration job files
+│               ├── lp/               # Licensed job files
+│               └── support-staff/    # Support job files
 ├── img/                    # Static images
 └── styles.css              # Application styles
 ```
+
+## File Storage Structure
+
+### Updated File Organization
+The application has been updated from the legacy `files/` structure to a more organized hierarchy:
+
+**New Structure (Current):**
+```
+employees/resources/pdf/desc/
+├── ap/               # Administration job files (A-codes)
+├── lp/               # Licensed job files (L-codes) 
+└── support-staff/    # Support job files (S-codes)
+```
+
+**Legacy Structure (Deprecated):**
+```
+files/
+├── administration/   # Old admin location
+├── licensed/        # Old licensed location
+└── support/         # Old support location
+```
+
+### File Naming Convention
+- **Administration**: Files named with job code (e.g., `A225.pdf`)
+- **Licensed**: Files named with job ID (e.g., `LIC001.pdf`)
+- **Support**: Files named with job code (e.g., `0021.pdf`)
+
+### Path Configuration
+File paths are configured in:
+- `includes/config/app-config.php`: Path constants
+- `includes/functions/file-upload.php`: Upload directory function
+- `includes/components/job-card.php`: Display link generation
 
 ## Database Schema
 
@@ -243,13 +278,13 @@ DB_PASSWORD=your_password
 ### File Permissions
 ```bash
 # Set directory permissions
-chmod 755 files/
-chmod 755 files/administration/
-chmod 755 files/licensed/
-chmod 755 files/support/
+chmod 755 employees/resources/pdf/desc/
+chmod 755 employees/resources/pdf/desc/ap/
+chmod 755 employees/resources/pdf/desc/lp/
+chmod 755 employees/resources/pdf/desc/support-staff/
 
 # Set ownership (web server user)
-chown -R www-data:www-data files/
+chown -R www-data:www-data employees/
 ```
 
 ## Development Guidelines
@@ -292,7 +327,7 @@ chown -R www-data:www-data files/
 1. Deploy files to web server document root
 2. Create MySQL database and import schema
 3. Configure `.env` file with database credentials
-4. Set proper file permissions on `files/` directory
+4. Set proper file permissions on `employees/resources/pdf/desc/` directory
 5. Configure web server to serve PHP files
 6. Test database connectivity and file upload functionality
 
@@ -314,7 +349,7 @@ chown -R www-data:www-data files/
 - Validate network connectivity to database server
 
 #### File Upload Issues
-- Check directory permissions on `files/` folder
+- Check directory permissions on `employees/resources/pdf/desc/` folder
 - Verify PHP `upload_max_filesize` and `post_max_size` settings
 - Confirm `file_uploads = On` in PHP configuration
 - Check available disk space

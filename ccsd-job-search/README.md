@@ -41,30 +41,35 @@ Ensure the following directory structure exists with proper permissions:
 ```
 ccsd-job-search/
 ├── admin/
-├── files/
-│   ├── administration/
-│   ├── licensed/
-│   └── support/
+├── employees/
+│   └── resources/
+│       └── pdf/
+│           └── desc/
+│               ├── ap/               # Administration job files
+│               ├── lp/               # Licensed job files
+│               └── support-staff/    # Support job files
 ├── img/
 ├── includes/
 └── styles.css
 ```
+
+**Note**: The file storage has been updated from the legacy `files/` structure to the new `employees/resources/pdf/desc/` structure for better organization.
 
 ### 4. File Permissions
 
 Set proper permissions for file uploads:
 
 ```bash
-chmod 755 files/
-chmod 755 files/administration/
-chmod 755 files/licensed/
-chmod 755 files/support/
+chmod 755 employees/resources/pdf/desc/
+chmod 755 employees/resources/pdf/desc/ap/
+chmod 755 employees/resources/pdf/desc/lp/
+chmod 755 employees/resources/pdf/desc/support-staff/
 ```
 
 Or ensure your web server user (usually `www-data`) has write access:
 
 ```bash
-chown -R www-data:www-data files/
+chown -R www-data:www-data employees/
 ```
 
 ### 5. Web Server Configuration
@@ -148,7 +153,7 @@ The application accepts:
 ## Troubleshooting
 
 ### File Upload Issues
-- Check directory permissions on `files/` folder
+- Check directory permissions on `employees/resources/pdf/desc/` folder
 - Verify PHP `upload_max_filesize` and `post_max_size` settings
 - Ensure `file_uploads = On` in PHP configuration
 
@@ -161,7 +166,7 @@ The application accepts:
 ```bash
 # Fix file permissions
 chmod -R 755 /path/to/ccsd-job-search/
-chown -R www-data:www-data /path/to/ccsd-job-search/files/
+chown -R www-data:www-data /path/to/ccsd-job-search/employees/
 ```
 
 ### PHP Errors
@@ -187,4 +192,17 @@ chown -R www-data:www-data /path/to/ccsd-job-search/files/
 - **Backend**: PHP 7.4+ with PDO
 - **Database**: MySQL with normalized job tables
 - **Components**: Modular PHP include system
-- **File Storage**: Local filesystem organization
+- **File Storage**: Organized filesystem with updated structure
+
+## Documentation
+
+For detailed technical information, system architecture, and development guidelines, see the [Technical Documentation](technical-documentation.md).
+
+The technical documentation includes:
+- Detailed system architecture
+- Component structure and relationships
+- Database schema and relationships
+- File management system
+- API endpoints and functionality
+- Development workflows
+- Testing procedures
