@@ -32,6 +32,12 @@ Thumbs.db
 # PHP files
 composer.phar
 /vendor/
+composer.lock
+
+# Test outputs
+/.phpunit.result.cache
+/coverage/
+/tests/temp_uploads/
 
 # Backup files
 *.bak

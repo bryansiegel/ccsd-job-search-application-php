@@ -5,6 +5,7 @@ A PHP-based job search and management portal for CCSD (Clark County School Distr
 ## System Requirements
 
 - **PHP**: 7.4 or higher
+- **Composer**: 2.0+ for dependency management
 - **Web Server**: Apache or Nginx
 - **Database**: MySQL 5.7+ or MariaDB 10.2+
 - **PHP Extensions**:
@@ -12,29 +13,55 @@ A PHP-based job search and management portal for CCSD (Clark County School Distr
   - PDO MySQL
   - Fileinfo (for file uploads)
   - JSON
-- **File Permissions**: Write access to `files/` directory
+- **File Permissions**: Write access to upload directories
 
 ## Installation
 
-### 1. Database Setup
+### 1. Install Dependencies
+
+The application uses Composer for dependency management. Install Composer if not already available:
+
+```bash
+# Install Composer globally (recommended)
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+# OR download locally to project directory
+curl -sS https://getcomposer.org/installer | php
+```
+
+Install project dependencies:
+
+```bash
+# With global Composer
+composer install
+
+# OR with local composer.phar
+php composer.phar install
+
+# For production (skip dev dependencies)
+composer install --no-dev --optimize-autoloader
+```
+
+### 2. Database Setup
 
 Create a MySQL database and import from _mysql_dumps (ccsd_jobs_php.sql):
 - `administration_jobs`
 - `licensed_jobs` 
 - `support_jobs`
 
-### 2. Database Configuration
+### 3. Database Configuration
 
 Edit `.env` with your database credentials:
 
-```php
-$host = 'localhost';
-$dbname = 'your_database_name';
-$username = 'your_username';
-$password = 'your_password';
+```env
+DB_HOST=localhost
+DB_NAME=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
 ```
 
-### 3. File Structure
+### 4. File Structure
 
 Ensure the following directory structure exists with proper permissions:
 
@@ -55,7 +82,7 @@ ccsd-job-search/
 
 **Note**: The file storage has been updated from the legacy `files/` structure to the new `employees/resources/pdf/desc/` structure for better organization.
 
-### 4. File Permissions
+### 5. File Permissions
 
 Set proper permissions for file uploads:
 
@@ -72,7 +99,7 @@ Or ensure your web server user (usually `www-data`) has write access:
 chown -R www-data:www-data employees/
 ```
 
-### 5. Web Server Configuration
+### 6. Web Server Configuration
 
 Place the application in your web server's document root or a subdirectory.
 
@@ -185,6 +212,8 @@ chown -R www-data:www-data /path/to/ccsd-job-search/employees/
 - **Responsive Design**: Mobile-friendly interface
 - **Tabbed Interface**: Organized job type display
 - **Admin Panel**: Complete job management system
+- **Comprehensive Testing**: PHPUnit test suite with 90+ tests
+- **Quality Assurance**: Automated testing for all functionality
 
 ## Technical Architecture
 
@@ -193,6 +222,54 @@ chown -R www-data:www-data /path/to/ccsd-job-search/employees/
 - **Database**: MySQL with normalized job tables
 - **Components**: Modular PHP include system
 - **File Storage**: Organized filesystem with updated structure
+- **Dependency Management**: Composer for PHP packages
+- **Testing**: PHPUnit 9.6+ with comprehensive test coverage
+- **Quality Control**: Automated testing pipeline
+
+## Dependencies
+
+### Production Dependencies
+The application has minimal production dependencies for optimal performance:
+
+```json
+{
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
+    }
+}
+```
+
+### Development Dependencies
+Development and testing tools:
+
+```json
+{
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
+```
+
+### Composer Commands
+```bash
+# Install all dependencies (development + production)
+composer install
+
+# Install production dependencies only
+composer install --no-dev
+
+# Update dependencies
+composer update
+
+# Check for security vulnerabilities
+composer audit
+
+# Optimize autoloader for production
+composer dump-autoload --optimize
+```
 
 ## Documentation
 
@@ -205,4 +282,42 @@ The technical documentation includes:
 - File management system
 - API endpoints and functionality
 - Development workflows
-- Testing procedures
+- Comprehensive testing procedures
+
+## Testing
+
+This application includes a comprehensive PHPUnit test suite with 90+ tests covering:
+
+### Test Categories
+- **Unit Tests**: JobModel CRUD, Search, Filters, File Upload
+- **Integration Tests**: Admin endpoints and complete workflows
+
+### Running Tests
+```bash
+# Install dependencies
+composer install
+
+# Run all tests
+./run-tests.sh
+
+# Run with coverage report
+./run-tests.sh --coverage
+
+# Run specific test suites
+./run-tests.sh --unit              # Unit tests only
+./run-tests.sh --integration       # Integration tests only
+```
+
+### Test Files
+- `tests/Unit/JobModelTest.php` - CRUD operations testing
+- `tests/Unit/SearchFunctionalityTest.php` - Search system testing
+- `tests/Unit/FilterFunctionalityTest.php` - Filter system testing
+- `tests/Unit/FileUploadTest.php` - File upload testing
+- `tests/Integration/AdminEndpointTest.php` - Endpoint testing
+
+### Prerequisites for Testing
+- PHPUnit 9.6+
+- Test database: `ccsd_jobs_test`
+- PHP 7.4+ with required extensions
+
+See [tests/README.md](tests/README.md) for detailed testing documentation.

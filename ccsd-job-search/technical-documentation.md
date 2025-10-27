@@ -11,6 +11,8 @@ The CCSD Job Search Portal is a PHP-based web application designed for Clark Cou
 - **Frontend**: HTML5, CSS3, JavaScript (vanilla)
 - **Web Server**: Apache/Nginx compatible
 - **File Storage**: Local filesystem with organized directory structure
+- **Dependency Management**: Composer 2.0+ for PHP package management
+- **Testing Framework**: PHPUnit 9.6+ for automated testing
 
 ### Design Patterns
 - **MVC-inspired**: Separation of concerns with models, views, and controllers
@@ -48,7 +50,22 @@ ccsd-job-search/
 │               ├── lp/               # Licensed job files
 │               └── support-staff/    # Support job files
 ├── img/                    # Static images
-└── styles.css              # Application styles
+├── tests/                  # PHPUnit test suite
+│   ├── Unit/              # Unit tests
+│   │   ├── JobModelTest.php        # CRUD operations testing
+│   │   ├── SearchFunctionalityTest.php  # Search system testing
+│   │   ├── FilterFunctionalityTest.php  # Filter system testing
+│   │   └── FileUploadTest.php      # File upload testing
+│   ├── Integration/       # Integration tests
+│   │   └── AdminEndpointTest.php   # Admin endpoint testing
+│   ├── Fixtures/          # Test data
+│   │   └── TestData.php    # Sample data for testing
+│   ├── bootstrap.php      # Test environment setup
+│   └── README.md          # Testing documentation
+├── composer.json          # PHP dependencies
+├── phpunit.xml           # PHPUnit configuration
+├── run-tests.sh          # Test runner script
+└── styles.css            # Application styles
 ```
 
 ## File Storage Structure
@@ -82,6 +99,90 @@ File paths are configured in:
 - `includes/config/app-config.php`: Path constants
 - `includes/functions/file-upload.php`: Upload directory function
 - `includes/components/job-card.php`: Display link generation
+
+## Dependency Management
+
+### Composer Configuration
+The application uses Composer for PHP dependency management and autoloading:
+
+#### composer.json Structure
+```json
+{
+    "name": "ccsd/job-search-portal",
+    "description": "CCSD Job Search Portal with CRUD functionality",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CCSD\\JobPortal\\": "includes/",
+            "CCSD\\JobPortal\\Tests\\": "tests/"
+        }
+    }
+}
+```
+
+### Production Dependencies
+The application maintains minimal production dependencies:
+- **PHP**: Core language requirement (7.4+)
+- **ext-pdo**: Database connectivity
+- **ext-json**: JSON data handling
+- **ext-fileinfo**: File type detection for uploads
+
+### Development Dependencies
+Testing and development tools:
+- **PHPUnit**: Comprehensive testing framework (9.5+)
+- **Autoloading**: PSR-4 compliant class loading
+
+### Composer Commands
+```bash
+# Installation
+composer install                    # Install all dependencies
+composer install --no-dev          # Production installation
+composer install --optimize-autoloader  # Optimized for production
+
+# Updates
+composer update                     # Update all packages
+composer update phpunit/phpunit     # Update specific package
+
+# Maintenance
+composer audit                      # Security vulnerability check
+composer dump-autoload             # Regenerate autoloader
+composer validate                  # Validate composer.json
+
+# Information
+composer show                       # List installed packages
+composer outdated                   # Check for package updates
+composer why vendor/package         # Dependency analysis
+```
+
+### Autoloading
+The application uses PSR-4 autoloading for:
+- **Application Classes**: `CCSD\JobPortal\` namespace maps to `includes/`
+- **Test Classes**: `CCSD\JobPortal\Tests\` namespace maps to `tests/`
+
+#### Autoloader Usage
+```php
+// Composer autoloader (automatically included in bootstrap)
+require_once 'vendor/autoload.php';
+
+// Manual class loading (legacy compatibility)
+require_once 'includes/db/model.php';
+require_once 'includes/functions/job-processing.php';
+```
+
+### Package Security
+- **Regular Updates**: Keep dependencies updated for security patches
+- **Vulnerability Scanning**: Use `composer audit` for security checks
+- **Lock File**: `composer.lock` ensures consistent dependency versions
+- **Version Constraints**: Semantic versioning for stable updates
 
 ## Database Schema
 
@@ -325,11 +426,12 @@ chown -R www-data:www-data employees/
 
 ### Installation Steps
 1. Deploy files to web server document root
-2. Create MySQL database and import schema
-3. Configure `.env` file with database credentials
-4. Set proper file permissions on `employees/resources/pdf/desc/` directory
-5. Configure web server to serve PHP files
-6. Test database connectivity and file upload functionality
+2. Install Composer dependencies: `composer install --no-dev --optimize-autoloader`
+3. Create MySQL database and import schema
+4. Configure `.env` file with database credentials
+5. Set proper file permissions on `employees/resources/pdf/desc/` directory
+6. Configure web server to serve PHP files
+7. Test database connectivity and file upload functionality
 
 ### Production Considerations
 - Enable HTTPS for secure data transmission
@@ -360,6 +462,34 @@ chown -R www-data:www-data employees/
 - Analyze file upload/download performance
 - Review web server error logs
 
+#### Composer/Dependency Issues
+- **Missing Composer**: Install Composer from https://getcomposer.org/
+- **Permission Errors**: Ensure write permissions on `vendor/` directory
+- **Memory Issues**: Increase PHP memory limit (`php -d memory_limit=512M composer install`)
+- **Lock File Conflicts**: Delete `vendor/` and `composer.lock`, then run `composer install`
+- **Autoloader Issues**: Run `composer dump-autoload` to regenerate autoloader
+- **Version Conflicts**: Check `composer.json` constraints and run `composer update`
+- **Network Issues**: Use `composer install --no-plugins --no-scripts` for minimal installation
+
+#### Composer Troubleshooting Commands
+```bash
+# Diagnose Composer issues
+composer diagnose
+
+# Clear Composer cache
+composer clear-cache
+
+# Validate composer.json
+composer validate
+
+# Install with verbose output
+composer install -vvv
+
+# Reinstall everything
+rm -rf vendor/ composer.lock
+composer install
+```
+
 ### Error Logging
 Enable error logging for debugging:
 ```php
@@ -367,6 +497,208 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', '/path/to/error.log');
+```
+
+## Testing Framework
+
+### Overview
+The application includes a comprehensive PHPUnit test suite with 90+ individual tests covering all major functionality:
+
+### Test Structure
+```
+tests/
+├── Unit/                           # Component-level testing
+│   ├── JobModelTest.php           # Database operations (25+ tests)
+│   ├── SearchFunctionalityTest.php # Search system (20+ tests)
+│   ├── FilterFunctionalityTest.php # Filter system (25+ tests)
+│   └── FileUploadTest.php         # File handling (20+ tests)
+├── Integration/                    # Workflow testing
+│   └── AdminEndpointTest.php      # Admin interface (15+ tests)
+├── Fixtures/                      # Test data
+│   └── TestData.php               # Sample data generation
+├── bootstrap.php                  # Test environment setup
+└── README.md                      # Testing documentation
+```
+
+### Test Categories
+
+#### Unit Tests
+- **JobModelTest**: Complete CRUD operations for all job types
+  - Create, read, update, delete operations
+  - Data validation and sanitization
+  - Error handling and edge cases
+  - Aggregate operations (counts, listings)
+
+- **SearchFunctionalityTest**: Cross-table search capabilities
+  - Multi-field search across all job types
+  - Case-insensitive and partial matching
+  - Special character handling
+  - Empty search and no-result scenarios
+
+- **FilterFunctionalityTest**: Advanced filtering system
+  - Job type, grade, code, division filters
+  - Multiple filter combinations
+  - Filter option generation
+  - Edge cases and invalid filters
+
+- **FileUploadTest**: File management system
+  - File validation (type, size, format)
+  - Directory path generation
+  - Upload error handling
+  - Filename sanitization
+
+#### Integration Tests
+- **AdminEndpointTest**: Complete workflow testing
+  - Admin interface CRUD operations
+  - Search and filter endpoints
+  - Data sanitization and security
+  - Error handling and validation
+
+### Test Configuration
+
+#### PHPUnit Setup (phpunit.xml)
+```xml
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Integration Tests">
+            <directory>tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DB_NAME" value="ccsd_jobs_test"/>
+        <env name="APP_ENV" value="testing"/>
+    </php>
+</phpunit>
+```
+
+#### Test Database
+- **Isolation**: Each test runs with clean database state
+- **Setup**: Automatic schema import and data cleanup
+- **Environment**: Separate test database (`ccsd_jobs_test`)
+- **Transactions**: Rollback capabilities for data integrity
+
+### Running Tests
+
+#### Basic Commands
+```bash
+# Install dependencies
+composer install
+
+# Run all tests
+./run-tests.sh
+
+# Run with verbose output
+./run-tests.sh --verbose
+
+# Generate coverage report
+./run-tests.sh --coverage
+```
+
+#### Specific Test Suites
+```bash
+# Unit tests only
+./run-tests.sh --unit
+./vendor/bin/phpunit --testsuite="Unit Tests"
+
+# Integration tests only  
+./run-tests.sh --integration
+./vendor/bin/phpunit --testsuite="Integration Tests"
+
+# Individual test files
+./vendor/bin/phpunit tests/Unit/JobModelTest.php
+./vendor/bin/phpunit tests/Unit/SearchFunctionalityTest.php
+```
+
+### Test Data Management
+
+#### Fixtures (TestData.php)
+- Sample job data for all job types
+- Multiple data sets for comprehensive testing
+- PDF content generation for file testing
+- Edge case data scenarios
+
+#### Database Management
+```php
+// Test helper functions
+resetTestDatabase();           // Clean slate for each test
+setupTestFileDirectory();     // Temporary file handling
+cleanupTestFiles();          // Post-test cleanup
+```
+
+### Continuous Integration
+
+#### Automated Testing Pipeline
+```bash
+# CI/CD Script Example
+composer install --no-interaction
+mysql -e "CREATE DATABASE ccsd_jobs_test;"
+mysql ccsd_jobs_test < _mysql_dumps/ccsd_jobs_php.sql
+./vendor/bin/phpunit --coverage-clover coverage.xml
+```
+
+#### Coverage Goals
+- **Unit Tests**: 95%+ coverage of business logic
+- **Integration Tests**: 80%+ coverage of endpoints
+- **Critical Paths**: 100% coverage of CRUD operations
+- **Error Handling**: 90%+ coverage of exception paths
+
+### Test Quality Metrics
+
+#### Coverage Areas
+- ✅ **CRUD Operations**: All create, read, update, delete functions
+- ✅ **Search System**: Cross-table search with all field types
+- ✅ **Filter System**: All filter combinations and edge cases
+- ✅ **File Upload**: Complete upload pipeline and validation
+- ✅ **Admin Interface**: Full endpoint workflow testing
+- ✅ **Error Handling**: Exception cases and invalid input
+- ✅ **Data Integrity**: Database transactions and cleanup
+
+#### Test Statistics
+- **Total Tests**: 90+ individual test methods
+- **Test Files**: 5 comprehensive test classes
+- **Code Coverage**: Targets 90%+ for critical components
+- **Database Operations**: Full transaction testing
+- **File Operations**: Upload, validation, cleanup testing
+
+### Development Workflow
+
+#### Test-Driven Development
+1. **Write Tests First**: Define expected behavior
+2. **Implement Features**: Code to pass tests
+3. **Refactor**: Improve code while maintaining tests
+4. **Regression Testing**: Ensure changes don't break existing functionality
+
+#### Pre-Commit Testing
+```bash
+# Recommended pre-commit workflow
+./run-tests.sh --verbose        # Full test suite
+./run-tests.sh --coverage      # Coverage verification
+git add . && git commit        # Commit if tests pass
+```
+
+### Debugging Tests
+
+#### Common Debugging Techniques
+```bash
+# Run single test with verbose output
+./vendor/bin/phpunit tests/Unit/JobModelTest.php::testCreateAdminJob --verbose
+
+# Debug with error output
+./vendor/bin/phpunit --debug tests/Unit/JobModelTest.php
+
+# Check test database state
+mysql -u root -p ccsd_jobs_test -e "SELECT * FROM administration_jobs;"
+```
+
+#### Test Environment Variables
+```php
+// Custom test configuration
+define('TESTING', true);
+$_ENV['APP_ENV'] = 'testing';
+$_ENV['DB_NAME'] = 'ccsd_jobs_test';
 ```
 
 ## Maintenance
@@ -377,6 +709,8 @@ ini_set('error_log', '/path/to/error.log');
 - Performance monitoring and optimization
 - Security updates and patches
 - Log file rotation and cleanup
+- **Test Suite Maintenance**: Keep tests updated with code changes
+- **Coverage Monitoring**: Maintain high test coverage standards
 
 ### Monitoring
 - Database connection health
